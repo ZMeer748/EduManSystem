@@ -11313,7 +11313,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sSortAscending": ": activate to sort column ascending",
+				"sSortAscending": "：点击对列值进行升序排序",
 	
 				/**
 				 * ARIA label that is added to the table headers when the column may be
@@ -11336,7 +11336,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sSortDescending": ": activate to sort column descending"
+				"sSortDescending": "：点击对列值进行降序排序"
 			},
 	
 			/**
@@ -11366,7 +11366,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sFirst": "First",
+				"sFirst": "第一页",
 	
 	
 				/**
@@ -11389,7 +11389,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sLast": "Last",
+				"sLast": "最后一页",
 	
 	
 				/**
@@ -11412,7 +11412,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "下一页",
 	
 	
 				/**
@@ -11435,7 +11435,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "上一页"
 			},
 	
 			/**
@@ -11458,7 +11458,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			// "sEmptyTable": "No data available in table",
+			"sEmptyTable": "没有查询到数据",
 	
 	
 			/**
@@ -11490,7 +11491,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			// "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "共 _TOTAL_ 个条目，当前展示的是第 _START_ 到第 _END_ 个条目",
 	
 	
 			/**
@@ -11511,7 +11513,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			// "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "共 0 条记录，当前展示的是第 0 到第 0 条记录",
 	
 	
 			/**
@@ -11533,7 +11536,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "（从 _MAX_ 个条目中筛选出）",
 	
 	
 			/**
@@ -11651,7 +11654,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "每页展示 _MENU_ 条数据",
 	
 	
 			/**
@@ -11731,7 +11734,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			// "sSearch": "Search:",
+			"sSearch": "搜索：",
 	
 	
 			/**
@@ -11789,7 +11793,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			// "sZeroRecords": "No matching records found"
+			"sZeroRecords": "没有找到相关数据"
 		},
 	
 	
