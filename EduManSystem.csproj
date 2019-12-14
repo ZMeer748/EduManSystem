@@ -1,0 +1,578 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0EE49E0A-126A-445A-8E8B-FA26056C194C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EduManSystem</RootNamespace>
+    <AssemblyName>EduManSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44309</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminLTE\dist\css\adminlte.css" />
+    <Content Include="AdminLTE\dist\css\adminlte.min.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.components.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.components.min.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.core.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.core.min.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.extra-components.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.pages.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.pages.min.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.plugins.css" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="AdminLTE\dist\img\AdminLTELogo.png" />
+    <Content Include="AdminLTE\dist\img\avatar.png" />
+    <Content Include="AdminLTE\dist\img\avatar04.png" />
+    <Content Include="AdminLTE\dist\img\avatar2.png" />
+    <Content Include="AdminLTE\dist\img\avatar3.png" />
+    <Content Include="AdminLTE\dist\img\avatar5.png" />
+    <Content Include="AdminLTE\dist\img\boxed-bg.jpg" />
+    <Content Include="AdminLTE\dist\img\boxed-bg.png" />
+    <Content Include="AdminLTE\dist\img\credit\american-express.png" />
+    <Content Include="AdminLTE\dist\img\credit\cirrus.png" />
+    <Content Include="AdminLTE\dist\img\credit\mastercard.png" />
+    <Content Include="AdminLTE\dist\img\credit\mestro.png" />
+    <Content Include="AdminLTE\dist\img\credit\paypal.png" />
+    <Content Include="AdminLTE\dist\img\credit\paypal2.png" />
+    <Content Include="AdminLTE\dist\img\credit\visa.png" />
+    <Content Include="AdminLTE\dist\img\default-150x150.png" />
+    <Content Include="AdminLTE\dist\img\icons.png" />
+    <Content Include="AdminLTE\dist\img\photo1.png" />
+    <Content Include="AdminLTE\dist\img\photo2.png" />
+    <Content Include="AdminLTE\dist\img\photo3.jpg" />
+    <Content Include="AdminLTE\dist\img\photo4.jpg" />
+    <Content Include="AdminLTE\dist\img\prod-1.jpg" />
+    <Content Include="AdminLTE\dist\img\prod-2.jpg" />
+    <Content Include="AdminLTE\dist\img\prod-3.jpg" />
+    <Content Include="AdminLTE\dist\img\prod-4.jpg" />
+    <Content Include="AdminLTE\dist\img\prod-5.jpg" />
+    <Content Include="AdminLTE\dist\img\user1-128x128.jpg" />
+    <Content Include="AdminLTE\dist\img\user2-160x160.jpg" />
+    <Content Include="AdminLTE\dist\img\user3-128x128.jpg" />
+    <Content Include="AdminLTE\dist\img\user4-128x128.jpg" />
+    <Content Include="AdminLTE\dist\img\user5-128x128.jpg" />
+    <Content Include="AdminLTE\dist\img\user6-128x128.jpg" />
+    <Content Include="AdminLTE\dist\img\user7-128x128.jpg" />
+    <Content Include="AdminLTE\dist\img\user8-128x128.jpg" />
+    <Content Include="AdminLTE\dist\js\adminlte.js" />
+    <Content Include="AdminLTE\dist\js\adminlte.min.js" />
+    <Content Include="AdminLTE\dist\js\demo.js" />
+    <Content Include="AdminLTE\dist\js\pages\dashboard.js" />
+    <Content Include="AdminLTE\dist\js\pages\dashboard2.js" />
+    <Content Include="AdminLTE\dist\js\pages\dashboard3.js" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AdminLTE\plugins\chart.js\Chart.bundle.js" />
+    <Content Include="AdminLTE\plugins\chart.js\Chart.bundle.min.js" />
+    <Content Include="AdminLTE\plugins\chart.js\Chart.css" />
+    <Content Include="AdminLTE\plugins\chart.js\Chart.js" />
+    <Content Include="AdminLTE\plugins\chart.js\Chart.min.css" />
+    <Content Include="AdminLTE\plugins\chart.js\Chart.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-bs4\css\dataTables.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-bs4\css\dataTables.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-bs4\js\dataTables.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-bs4\js\dataTables.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="AdminLTE\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\daterangepicker.css" />
+    <Content Include="AdminLTE\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\drp.png" />
+    <Content Include="AdminLTE\plugins\daterangepicker\example\amd\index.html" />
+    <Content Include="AdminLTE\plugins\daterangepicker\example\amd\main.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\example\amd\require.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\example\browserify\bundle.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\example\browserify\index.html" />
+    <Content Include="AdminLTE\plugins\daterangepicker\example\browserify\main.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\moment.min.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\package.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\website.css" />
+    <Content Include="AdminLTE\plugins\daterangepicker\website.js" />
+    <Content Include="AdminLTE\plugins\daterangepicker\website\index.html" />
+    <Content Include="AdminLTE\plugins\daterangepicker\website\website.css" />
+    <Content Include="AdminLTE\plugins\daterangepicker\website\website.js" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\all.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\all.min.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\brands.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\brands.min.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\fontawesome.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\regular.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\regular.min.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\solid.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\solid.min.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\v4-shims.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="AdminLTE\plugins\icheck-bootstrap\icheck-bootstrap.css" />
+    <Content Include="AdminLTE\plugins\icheck-bootstrap\icheck-bootstrap.min.css" />
+    <Content Include="AdminLTE\plugins\jquery-knob\jquery.knob.min.js" />
+    <Content Include="AdminLTE\plugins\jquery-ui\AUTHORS.txt" />
+    <Content Include="AdminLTE\plugins\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="AdminLTE\plugins\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="AdminLTE\plugins\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="AdminLTE\plugins\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="AdminLTE\plugins\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="AdminLTE\plugins\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="AdminLTE\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="AdminLTE\plugins\jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="AdminLTE\plugins\jquery-ui\LICENSE.txt" />
+    <Content Include="AdminLTE\plugins\jquery\core.js" />
+    <Content Include="AdminLTE\plugins\jquery\jquery.js" />
+    <Content Include="AdminLTE\plugins\jquery\jquery.min.js" />
+    <Content Include="AdminLTE\plugins\jquery\jquery.slim.js" />
+    <Content Include="AdminLTE\plugins\jquery\jquery.slim.min.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\jquery.vmap.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\jquery.vmap.min.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\jqvmap.css" />
+    <Content Include="AdminLTE\plugins\jqvmap\jqvmap.min.css" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.africa.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.asia.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.australia.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.europe.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.north-america.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.south-america.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.algeria.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.argentina.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.brazil.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.canada.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.croatia.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.france.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.greece.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.indonesia.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.iran.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.iraq.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.new_regions_france.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.russia.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.serbia.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.tunisia.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.turkey.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.ukraine.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.usa.counties.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.usa.districts.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="AdminLTE\plugins\moment\locales.js" />
+    <Content Include="AdminLTE\plugins\moment\locales.min.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\af.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ar-dz.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ar-kw.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ar-ly.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ar-ma.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ar-sa.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ar-tn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ar.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\az.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\be.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\bg.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\bm.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\bn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\bo.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\br.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\bs.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ca.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\cs.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\cv.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\cy.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\da.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\de-at.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\de-ch.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\de.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\dv.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\el.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\en-au.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\en-ca.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\en-gb.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\en-ie.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\en-il.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\en-nz.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\en-SG.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\eo.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\es-do.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\es-us.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\es.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\et.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\eu.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\fa.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\fi.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\fo.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\fr-ca.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\fr-ch.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\fr.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\fy.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ga.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\gd.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\gl.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\gom-latn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\gu.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\he.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\hi.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\hr.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\hu.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\hy-am.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\id.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\is.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\it-ch.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\it.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ja.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\jv.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ka.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\kk.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\km.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\kn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ko.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ku.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ky.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\lb.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\lo.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\lt.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\lv.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\me.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\mi.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\mk.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ml.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\mn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\mr.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ms-my.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ms.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\mt.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\my.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\nb.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ne.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\nl-be.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\nl.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\nn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\pa-in.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\pl.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\pt-br.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\pt.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ro.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ru.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sd.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\se.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\si.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sk.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sl.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sq.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sr-cyrl.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sr.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ss.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sv.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\sw.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ta.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\te.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tet.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tg.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\th.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tl-ph.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tlh.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tr.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tzl.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tzm-latn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\tzm.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ug-cn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\uk.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\ur.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\uz-latn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\uz.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\vi.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\x-pseudo.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\yo.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\zh-cn.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\zh-hk.js" />
+    <Content Include="AdminLTE\plugins\moment\locale\zh-tw.js" />
+    <Content Include="AdminLTE\plugins\moment\moment-with-locales.js" />
+    <Content Include="AdminLTE\plugins\moment\moment-with-locales.min.js" />
+    <Content Include="AdminLTE\plugins\moment\moment.min.js" />
+    <Content Include="AdminLTE\plugins\overlayScrollbars\css\OverlayScrollbars.css" />
+    <Content Include="AdminLTE\plugins\overlayScrollbars\css\OverlayScrollbars.min.css" />
+    <Content Include="AdminLTE\plugins\overlayScrollbars\js\jquery.overlayScrollbars.js" />
+    <Content Include="AdminLTE\plugins\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="AdminLTE\plugins\overlayScrollbars\js\OverlayScrollbars.js" />
+    <Content Include="AdminLTE\plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
+    <Content Include="AdminLTE\plugins\sparklines\sparkline.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ar-AR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ar-AR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-bg-BG.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-bg-BG.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ca-ES.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ca-ES.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-cs-CZ.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-cs-CZ.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-da-DK.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-da-DK.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-de-DE.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-de-DE.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-el-GR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-el-GR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-ES.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-ES.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-EU.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-EU.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fa-IR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fa-IR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fi-FI.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fi-FI.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fr-FR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fr-FR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-gl-ES.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-gl-ES.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-he-IL.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-he-IL.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hr-HR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hr-HR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hu-HU.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hu-HU.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-id-ID.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-id-ID.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-it-IT.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-it-IT.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ja-JP.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ja-JP.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ko-KR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ko-KR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LT.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LT.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LV.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LV.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-mn-MN.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-mn-MN.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nb-NO.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nb-NO.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nl-NL.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nl-NL.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pl-PL.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pl-PL.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-BR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-BR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-PT.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-PT.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ro-RO.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ro-RO.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ru-RU.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ru-RU.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sk-SK.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sk-SK.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sl-SI.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sl-SI.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS-Latin.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sv-SE.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sv-SE.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ta-IN.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ta-IN.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-th-TH.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-th-TH.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-tr-TR.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-tr-TR.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uk-UA.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uk-UA.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uz-UZ.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uz-UZ.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-vi-VN.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-vi-VN.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-CN.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-CN.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-TW.js" />
+    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-TW.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.css" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.js" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-lite.css" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-lite.js" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-lite.min.js" />
+    <Content Include="AdminLTE\plugins\summernote\summernote.css" />
+    <Content Include="AdminLTE\plugins\summernote\summernote.js" />
+    <Content Include="AdminLTE\plugins\summernote\summernote.min.js" />
+    <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="App_Data\DB_EduManSystem.accdb" />
+    <Content Include="App_Data\DB_EduManSystem.sql" />
+    <Content Include="Default.aspx" />
+    <Content Include="IndexTest.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\AccessHelper.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexTest.aspx.cs">
+      <DependentUpon>IndexTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexTest.aspx.designer.cs">
+      <DependentUpon>IndexTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminLTE\dist\css\adminlte.css.map" />
+    <Content Include="AdminLTE\dist\css\adminlte.min.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="AdminLTE\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="AdminLTE\dist\js\adminlte.js.map" />
+    <Content Include="AdminLTE\dist\js\adminlte.min.js.map" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="AdminLTE\plugins\daterangepicker\bower.json" />
+    <Content Include="AdminLTE\plugins\daterangepicker\example\browserify\README.md" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="AdminLTE\plugins\icheck-bootstrap\LICENSE" />
+    <Content Include="AdminLTE\plugins\jquery\jquery.min.map" />
+    <Content Include="AdminLTE\plugins\jquery\jquery.slim.min.map" />
+    <Content Include="AdminLTE\plugins\summernote\font\summernote.eot" />
+    <Content Include="AdminLTE\plugins\summernote\font\summernote.ttf" />
+    <Content Include="AdminLTE\plugins\summernote\font\summernote.woff" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.js.map" />
+    <Content Include="AdminLTE\plugins\summernote\summernote-lite.js.map" />
+    <Content Include="AdminLTE\plugins\summernote\summernote.js.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9450</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44309/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
