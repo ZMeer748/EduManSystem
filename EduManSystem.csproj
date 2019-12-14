@@ -129,10 +129,84 @@
     <Content Include="AdminLTE\plugins\chart.js\Chart.js" />
     <Content Include="AdminLTE\plugins\chart.js\Chart.min.css" />
     <Content Include="AdminLTE\plugins\chart.js\Chart.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-autofill\css\autoFill.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-autofill\css\autoFill.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-autofill\js\autoFill.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-autofill\js\autoFill.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-autofill\js\dataTables.autoFill.js" />
+    <Content Include="AdminLTE\plugins\datatables-autofill\js\dataTables.autoFill.min.js" />
     <Content Include="AdminLTE\plugins\datatables-bs4\css\dataTables.bootstrap4.css" />
     <Content Include="AdminLTE\plugins\datatables-bs4\css\dataTables.bootstrap4.min.css" />
     <Content Include="AdminLTE\plugins\datatables-bs4\js\dataTables.bootstrap4.js" />
     <Content Include="AdminLTE\plugins\datatables-bs4\js\dataTables.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\css\buttons.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\css\buttons.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.colVis.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.colVis.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.flash.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.flash.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.html5.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.html5.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.print.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\buttons.print.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\dataTables.buttons.js" />
+    <Content Include="AdminLTE\plugins\datatables-buttons\js\dataTables.buttons.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-colreorder\css\colReorder.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-colreorder\css\colReorder.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-colreorder\js\colReorder.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-colreorder\js\colReorder.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-colreorder\js\dataTables.colReorder.js" />
+    <Content Include="AdminLTE\plugins\datatables-colreorder\js\dataTables.colReorder.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedcolumns\css\fixedColumns.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-fixedcolumns\css\fixedColumns.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-fixedcolumns\js\dataTables.fixedColumns.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedcolumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedcolumns\js\fixedColumns.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedcolumns\js\fixedColumns.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedheader\css\fixedHeader.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-fixedheader\css\fixedHeader.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-fixedheader\js\dataTables.fixedHeader.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedheader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedheader\js\fixedHeader.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-fixedheader\js\fixedHeader.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-keytable\css\keyTable.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-keytable\css\keyTable.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-keytable\js\dataTables.keyTable.js" />
+    <Content Include="AdminLTE\plugins\datatables-keytable\js\dataTables.keyTable.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-keytable\js\keyTable.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-keytable\js\keyTable.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-responsive\css\responsive.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-responsive\css\responsive.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-responsive\js\dataTables.responsive.js" />
+    <Content Include="AdminLTE\plugins\datatables-responsive\js\dataTables.responsive.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-responsive\js\responsive.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-responsive\js\responsive.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowgroup\css\rowGroup.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-rowgroup\css\rowGroup.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-rowgroup\js\dataTables.rowGroup.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowgroup\js\dataTables.rowGroup.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowgroup\js\rowGroup.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowgroup\js\rowGroup.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowreorder\css\rowReorder.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-rowreorder\css\rowReorder.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-rowreorder\js\dataTables.rowReorder.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowreorder\js\dataTables.rowReorder.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowreorder\js\rowReorder.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-rowreorder\js\rowReorder.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-scroller\css\scroller.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-scroller\css\scroller.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-scroller\js\dataTables.scroller.js" />
+    <Content Include="AdminLTE\plugins\datatables-scroller\js\dataTables.scroller.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-scroller\js\scroller.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-scroller\js\scroller.bootstrap4.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-select\css\select.bootstrap4.css" />
+    <Content Include="AdminLTE\plugins\datatables-select\css\select.bootstrap4.min.css" />
+    <Content Include="AdminLTE\plugins\datatables-select\js\dataTables.select.js" />
+    <Content Include="AdminLTE\plugins\datatables-select\js\dataTables.select.min.js" />
+    <Content Include="AdminLTE\plugins\datatables-select\js\select.bootstrap4.js" />
+    <Content Include="AdminLTE\plugins\datatables-select\js\select.bootstrap4.min.js" />
     <Content Include="AdminLTE\plugins\datatables\jquery.dataTables.js" />
     <Content Include="AdminLTE\plugins\datatables\jquery.dataTables.min.js" />
     <Content Include="AdminLTE\plugins\daterangepicker\daterangepicker.css" />
@@ -467,6 +541,7 @@
     <Content Include="App_Data\DB_EduManSystem.sql" />
     <Content Include="Default.aspx" />
     <Content Include="IndexTest.aspx" />
+    <Content Include="Student_Course_Selectable.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -486,6 +561,27 @@
       <DependentUpon>IndexTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Student.master.cs">
+      <DependentUpon>Student.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student.master.designer.cs">
+      <DependentUpon>Student.master</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Course_Selectable.aspx.cs">
+      <DependentUpon>Student_Course_Selectable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_Course_Selectable.aspx.designer.cs">
+      <DependentUpon>Student_Course_Selectable.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE\dist\css\adminlte.css.map" />
@@ -530,6 +626,8 @@
     <Content Include="AdminLTE\plugins\summernote\summernote-lite.js.map" />
     <Content Include="AdminLTE\plugins\summernote\summernote.js.map" />
     <None Include="packages.config" />
+    <Content Include="Site.Master" />
+    <Content Include="Student.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

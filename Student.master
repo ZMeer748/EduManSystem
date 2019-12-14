@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="EduManSystem.Student" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
+    <asp:ContentPlaceHolder ID="tittle" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="SideBarUserIconPlaceHolder" runat="server">
+    <i class="fas fa-user-graduate img-circle elevation-2 text-white" alt="学生"></i>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="SideBarUserNamePlaceHolder" runat="server">
+    <asp:Label runat="server" Text="学生姓名"></asp:Label>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="NavItemPlaceHolder" runat="server">
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>选修课程</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>已选课程</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>成绩表</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>校历</p>
+        </a>
+    </li>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">
+                        <asp:ContentPlaceHolder ID="ContentHeaderNamePlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <asp:ContentPlaceHolder ID="ContentHeaderBreadCrumbPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!-- <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active">Dashboard v1</li>
+                                </ol> -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- Main Content -->
+        <asp:ContentPlaceHolder ID="StudentMainContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </section>
+    <!-- /.content -->
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
