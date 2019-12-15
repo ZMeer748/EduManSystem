@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="EduManSystem.Student" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
     <asp:ContentPlaceHolder ID="tittle" runat="server">
     </asp:ContentPlaceHolder>
@@ -8,7 +9,7 @@
     </asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="SideBarUserIconPlaceHolder" runat="server">
-    <i class="fas fa-user-graduate img-circle elevation-2 text-white" alt="学生"></i>
+    <i class="fas fa-user-graduate img-circle elevation-2 text-white mt-1 ml-1" alt="学生" style="font-size:1.5em;"></i>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="SideBarUserNamePlaceHolder" runat="server">
     <asp:Label runat="server" Text="学生姓名"></asp:Label>
@@ -54,9 +55,9 @@
                     <asp:ContentPlaceHolder ID="ContentHeaderBreadCrumbPlaceHolder" runat="server">
                     </asp:ContentPlaceHolder>
                     <!-- <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Dashboard v1</li>
-                                </ol> -->
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard v1</li>
+                    </ol> -->
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->

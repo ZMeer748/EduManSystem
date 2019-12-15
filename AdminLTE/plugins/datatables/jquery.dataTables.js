@@ -11459,7 +11459,7 @@
 			 *    } );
 			 */
 			// "sEmptyTable": "No data available in table",
-			"sEmptyTable": "没有查询到数据",
+			"sEmptyTable": "没有找到相关记录",
 	
 	
 			/**
@@ -11492,7 +11492,7 @@
 			 *    } );
 			 */
 			// "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
-			"sInfo": "共 _TOTAL_ 个条目，当前展示的是第 _START_ 到第 _END_ 个条目",
+			"sInfo": "共 <code>_TOTAL_</code> 个条目，当前展示的是第 <code>_START_</code> 到第 <code>_END_</code> 个条目",
 	
 	
 			/**
@@ -11514,7 +11514,7 @@
 			 *    } );
 			 */
 			// "sInfoEmpty": "Showing 0 to 0 of 0 entries",
-			"sInfoEmpty": "共 0 条记录，当前展示的是第 0 到第 0 条记录",
+			"sInfoEmpty": "共 <code>0</code> 条记录，当前展示的是第 <code>0</code> 到第 <code>0</code> 条记录",
 	
 	
 			/**
@@ -11536,7 +11536,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "（从 _MAX_ 个条目中筛选出）",
+			"sInfoFiltered": "（筛选自 <code>_MAX_</code> 个条目）",
 	
 	
 			/**
@@ -11794,7 +11794,7 @@
 			 *    } );
 			 */
 			// "sZeroRecords": "No matching records found"
-			"sZeroRecords": "没有找到相关数据"
+			"sZeroRecords": "没有找到相关记录"
 		},
 	
 	

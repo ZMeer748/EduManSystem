@@ -15,7 +15,7 @@ namespace EduManSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             String sql;
-            sql = "SELECT * FROM course";
+            sql = "SELECT course_id as `课程编号`, course_name as `课程名称`, course_credit as `课程学分` FROM course";
             table_example_container_1.InnerHtml = ConvertDataTableToHTML(AccessHelper.Query(sql).Tables[0]);
         }
 
