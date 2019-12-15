@@ -49,7 +49,6 @@
   <script>
     $(function () {
       $('#MainContentPlaceHolder_StudentMainContentPlaceHolder_GridView1').DataTable();
-      $('#example3').DataTable();
     });
   </script>
 </asp:Content>
