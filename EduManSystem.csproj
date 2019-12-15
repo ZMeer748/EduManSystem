@@ -540,8 +540,6 @@
     <Content Include="App_Data\DB_EduManSystem.accdb" />
     <Content Include="App_Data\DB_EduManSystem.sql" />
     <Content Include="css\main.css" />
-    <Content Include="css\StyleSheet.css" />
-    <Content Include="css\StyleSheet.min.css" />
     <Content Include="css\util.css" />
     <Content Include="Default.aspx" />
     <Content Include="IndexTest.aspx" />
@@ -639,7 +637,6 @@
     <Content Include="AdminLTE\plugins\summernote\summernote-bs4.js.map" />
     <Content Include="AdminLTE\plugins\summernote\summernote-lite.js.map" />
     <Content Include="AdminLTE\plugins\summernote\summernote.js.map" />
-    <Content Include="css\StyleSheet.scss" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Student.master" />

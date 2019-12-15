@@ -14,7 +14,12 @@
     <link href="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/util.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/StyleSheet.min.css">
+    <style>
+        .callout span{
+            font-weight: bold;
+            color: #b721ff;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="SideBarUserIconPlaceHolder" runat="server">
 </asp:Content>
@@ -23,14 +28,12 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="NavItemPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-
-
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
                 <form id="form1" class="login100-form validate-form" runat="server">
                     <span class="login100-form-title p-b-26">
-                        Welcome
+                        账号登录
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="请输入用户名">
@@ -47,24 +50,19 @@
                         <span class="focus-input100" data-placeholder="密码"></span>
                     </div>
 
-
-                    <div class="switch">
-                        <!-- <i class="fas fa-user-cog img-circle elevation-2 text-white" alt="管理员"></i> -->
-                        <!-- <i class="fas fa-user-graduate img-circle elevation-2 text-white" alt="学生"></i> -->
-                        <!-- <i class="fas fa-chalkboard-teacher img-circle elevation-2 text-white" alt="教师"></i> -->
-                        <input name="switch" id="one" type="radio" checked />
-                        <label for="one" class="switch__label">
-                            <i class="fas fa-user-graduate img-circle elevation-2" alt="学生"></i>
+                    <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons" id="count_sort_select">
+                        <label class="btn btn-light active">
+                            <input type="radio" name="options" id="option1" value="学生" checked>学生
                         </label>
-                        <input name="switch" id="two" type="radio" />
-                        <label for="two" class="switch__label">
-                            <i class="fas fa-chalkboard-teacher img-circle elevation-2" alt="教师"></i>
+                        <label class="btn btn-light">
+                            <input type="radio" name="options" id="option2" value="教师">教师
                         </label>
-                        <input name="switch" id="three" type="radio" />
-                        <label for="three" class="switch__label">
-                            <i class="fas fa-user-cog img-circle elevation-2" alt="管理员"></i>
+                        <label class="btn btn-light">
+                            <input type="radio" name="options" id="option3" value="管理员">管理员
                         </label>
-                        <div class="switch__indicator"></div>
+                    </div>
+                    <div class="callout callout-info mt-3" style="border-left-color: #21d4fd;">
+                        以 <asp:Label ID="Label2" runat="server" Text="学生"></asp:Label> 的身份登录
                     </div>
 
                     <div class="container-login100-form-btn">
@@ -75,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="text-center p-t-115">
+                    <div class="text-center p-t-20">
                         <asp:Label class="txt1" ID="Label1" runat="server" Text="" style="color: #c80000;"></asp:Label>
                         <br />
                         <span class="txt1">
@@ -88,7 +86,6 @@
             </div>
         </div>
     </div>
-
     <div id="dropDownSelect1"></div>
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
@@ -101,4 +98,11 @@
     <script src="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
     <script src="js/countdowntime.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(function () {
+            $("#count_sort_select label").on("click", function () {
+                $('#MainContentPlaceHolder_Label2').html($(this).children('input').val());
+            });
+        });
+    </script>
 </asp:Content>

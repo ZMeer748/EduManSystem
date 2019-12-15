@@ -25,6 +25,9 @@
   <link rel="stylesheet" href="AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
   <link rel="stylesheet" href="AdminLTE/plugins/jqvmap/jqvmap.min.css">
+  <!-- ContentPlaceHolder -->
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
   <!-- Theme style -->
   <link rel="stylesheet" href="AdminLTE/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
@@ -35,8 +38,6 @@
   <link rel="stylesheet" href="AdminLTE/plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <asp:ContentPlaceHolder ID="head" runat="server">
-  </asp:ContentPlaceHolder>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
