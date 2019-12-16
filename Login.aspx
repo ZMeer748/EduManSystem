@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/util.css">
     <link rel="stylesheet" href="css/main.css">
     <style>
-        .callout span{
+        .callout span {
             font-weight: bold;
             color: #b721ff;
         }
@@ -28,10 +28,11 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="NavItemPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <form id="form1" class="login100-form validate-form" runat="server">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form id="form1" class="login100-form validate-form" runat="server">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <div class="limiter">
                     <span class="login100-form-title p-b-26">
                         账号登录
                     </span>
@@ -50,6 +51,11 @@
                         <span class="focus-input100" data-placeholder="密码"></span>
                     </div>
 
+                    <div class="callout callout-info mt-3" style="border-left-color: #21d4fd;">
+                        以 <span id="account_sort_label" runat="server">学生</span> 的身份登录
+                        <input id="account_sort_label_value" runat="server" type="hidden" value="学生" />
+                    </div>
+
                     <div class="btn-group btn-group-toggle btn-block" data-toggle="buttons" id="count_sort_select">
                         <label class="btn btn-light active">
                             <input type="radio" name="options" id="option1" value="学生" checked>学生
@@ -61,30 +67,33 @@
                             <input type="radio" name="options" id="option3" value="管理员">管理员
                         </label>
                     </div>
-                    <div class="callout callout-info mt-3" style="border-left-color: #21d4fd;">
-                        以 <asp:Label ID="Label2" runat="server" Text="学生"></asp:Label> 的身份登录
-                    </div>
 
-                    <div class="container-login100-form-btn">
-                        <div class="wrap-login100-form-btn">
-                            <div class="login100-form-bgbtn"></div>
-                            <button id="Button_Register" runat="server" onserverClick="Button_Login_ServerClick"
-                                class="login100-form-btn">登录</button>
-                        </div>
-                    </div>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <div class="container-login100-form-btn">
+                                <div class="wrap-login100-form-btn">
+                                    <div class="login100-form-bgbtn"></div>
+                                    <button id="Button_Login" runat="server" class="login100-form-btn"
+                                        onServerClick="Button_Login_Click">登录</button>
+                                </div>
+                            </div>
 
-                    <div class="text-center p-t-20">
-                        <asp:Label class="txt1" ID="Label1" runat="server" Text="" style="color: #c80000;"></asp:Label>
-                        <br />
-                        <span class="txt1">
-                            还没有账号？
-                        </span>
-                        <asp:HyperLink class="txt2" ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">点击注册
-                        </asp:HyperLink>
-                    </div>
-                </form>
-            </div>
+                            <div class="text-center p-t-20">
+                                <asp:Label class="txt1" ID="Label1" runat="server" Text="" style="color: #c80000;">
+                                </asp:Label>
+                                <br />
+                                <span class="txt1">
+                                    还没有账号？
+                                </span>
+                                <asp:HyperLink class="txt2" ID="HyperLink1" runat="server"
+                                    NavigateUrl="~/Register.aspx">点击注册
+                                </asp:HyperLink>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+            </form>
         </div>
+    </div>
     </div>
     <div id="dropDownSelect1"></div>
 </asp:Content>
@@ -101,8 +110,13 @@
     <script>
         $(function () {
             $("#count_sort_select label").on("click", function () {
-                $('#MainContentPlaceHolder_Label2').html($(this).children('input').val());
+                $('#MainContentPlaceHolder_account_sort_label').html($(this).children('input').val());
+                $('#MainContentPlaceHolder_account_sort_label_value').val($(this).children('input').val());
             });
+            // $("#MainContentPlaceHolder_Button_Login").on("click", function () {
+            //     var str = "<%=GetStr()%>";
+            //     console.log(str);
+            // });
         });
     </script>
 </asp:Content>

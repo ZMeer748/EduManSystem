@@ -14,8 +14,18 @@ namespace EduManSystem
 
         }
 
-        protected void Button_Login_ServerClick(object sender, EventArgs e)
+        protected void Button_Login_Click(object sender, EventArgs e)
         {
+            Label1.Text = account_sort_label_value.Value;
+            // Label1.Text = "TEST";
+            // Response.Redirect("Default.aspx");
         }
+
+        protected string GetStr() {
+            // String account_sort = Label2.Text;
+            return "";
+        }
+
+
     }
 }

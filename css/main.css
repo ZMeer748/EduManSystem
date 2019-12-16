@@ -412,7 +412,7 @@ iframe {
   content: "\f06a";
   font-size: 16px;
   color: #c80000;
-
+  font-family: FontAwesome;
   display: block;
   position: absolute;
   background-color: #fff;
