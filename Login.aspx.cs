@@ -36,6 +36,8 @@ namespace EduManSystem
                 Label1.Text = Session["account_user_name"].ToString();
                 Console.Write(Session["account_user_name"].ToString());
 
+                Response.Redirect("~/Student/Course/Selectable");
+
             }
             else
             {

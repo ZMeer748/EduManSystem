@@ -33,7 +33,7 @@
                         账号登录
                     </span>
 
-                    <div class="wrap-input100 validate-input" data-validate="请输入用户账号">
+                    <div class="wrap-input100 validate-input" data-validate="请输入用户 ID">
                         <asp:TextBox id="Input_ID" name="user_id" class="input100" type="text" runat="server" />
                         <span class="focus-input100" data-placeholder="用户 ID"></span>
                     </div>
@@ -79,7 +79,8 @@
                     <div class="text-center p-t-20">
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:Label class="txt1 d-none" ID="Label1" runat="server" Text=" " style="color: #c80000;">
+                                <asp:Label class="txt1 d-none" ID="Label1" runat="server" Text=" "
+                                    style="color: #c80000;">
                                 </asp:Label>
                             </ContentTemplate>
                         </asp:UpdatePanel>
@@ -113,10 +114,6 @@
                 $('#MainContentPlaceHolder_account_sort_label').html($(this).children('input').val());
                 $('#MainContentPlaceHolder_account_sort_label_value').val($(this).children('input')
                     .val());
-            });
-            $("#MainContentPlaceHolder_Button_Login").on("click", function () {
-                $('#MainContentPlaceHolder_Input_UserPassword').val("");
-                $('#MainContentPlaceHolder_Input_UserPassword').removeClass("has-val");
             });
         });
     </script>
