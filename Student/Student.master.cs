@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EduManSystem
+namespace EduManSystem.Student
 {
     public partial class Student : System.Web.UI.MasterPage
     {

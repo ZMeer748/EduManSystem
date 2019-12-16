@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EduManSystem
+namespace EduManSystem.Student
 {
 
 

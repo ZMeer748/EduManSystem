@@ -54,14 +54,24 @@ namespace EduManSystem
                 "~/ProductList.aspx"
             );
             routes.MapPageRoute(
-                "Login",
+                "Default",
+                "Default",
+                "~/Default.aspx"
+            );
+            routes.MapPageRoute(
+                "Empty",
                 "",
                 "~/Login.aspx"
             );
             routes.MapPageRoute(
-                "Student/Course",
-                "Student/Course",
-                "~/Student_Course_Selectable.aspx"
+                "Login",
+                "Login",
+                "~/Login.aspx"
+            );
+            routes.MapPageRoute(
+                "Student/Course/Selectable",
+                "Student/Course/Selectable",
+                "~/Student/Course/Selectable.aspx"
             );
         }
     }

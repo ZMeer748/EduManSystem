@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet"> -->
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
@@ -12,8 +12,8 @@
     <link href="https://cdn.bootcss.com/animsition/4.0.2/css/animsition.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/select2/4.0.10/css/select2.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" rel="stylesheet">
-    <link rel="stylesheet" href='<%=ResolveClientUrl("css/util.css") %>'>
-    <link rel="stylesheet" href='<%=ResolveClientUrl("css/main.css") %>'>
+    <link rel="stylesheet" href='<%=ResolveClientUrl("~/css/util.css") %>'>
+    <link rel="stylesheet" href='<%=ResolveClientUrl("~/css/main.css") %>'>
     <style>
         .callout span {
             font-weight: bold;
@@ -97,10 +97,10 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://cdn.bootcss.com/animsition/4.0.2/js/animsition.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.15.0/esm/popper.min.js"></script>
-    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
     <script src="https://cdn.bootcss.com/select2/4.0.10/js/select2.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/moment.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>

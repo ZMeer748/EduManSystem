@@ -547,7 +547,7 @@
     <Content Include="js\countdowntime.js" />
     <Content Include="js\main.js" />
     <Content Include="Login.aspx" />
-    <Content Include="Student_Course_Selectable.aspx" />
+    <Content Include="Student\Course\Selectable.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -584,19 +584,19 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Student.master.cs">
+    <Compile Include="Student\Course\Selectable.aspx.cs">
+      <DependentUpon>Selectable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Course\Selectable.aspx.designer.cs">
+      <DependentUpon>Selectable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Student.master.cs">
       <DependentUpon>Student.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student.master.designer.cs">
+    <Compile Include="Student\Student.master.designer.cs">
       <DependentUpon>Student.master</DependentUpon>
-    </Compile>
-    <Compile Include="Student_Course_Selectable.aspx.cs">
-      <DependentUpon>Student_Course_Selectable.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Student_Course_Selectable.aspx.designer.cs">
-      <DependentUpon>Student_Course_Selectable.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -643,13 +643,17 @@
     <Content Include="AdminLTE\plugins\summernote\summernote.js.map" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
-    <Content Include="Student.master" />
+    <Content Include="Student\Student.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administrator\" />
+    <Folder Include="Teacher\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

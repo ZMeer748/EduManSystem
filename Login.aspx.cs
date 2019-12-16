@@ -12,10 +12,10 @@ namespace EduManSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                Button_Login.Attributes.Add("OnClick", "javascript:if(confirm('试试看吧，能成功否？')) return false; ");
-            }
+            // if (!IsPostBack)
+            // {
+            //     Button_Login.Attributes.Add("OnClick", "javascript:if(confirm('试试看吧，能成功否？')) return false; ");
+            // }
         }
 
         protected void Button_Login_Click(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace EduManSystem
             string user_id = Input_ID.Text;
             string user_password = Input_UserPassword.Text;
             string user_type_str = account_sort_label_value.Value;
-            if(LoginCheck(user_type_str, user_id, user_password))
+            if (LoginCheck(user_type_str, user_id, user_password))
             {
                 string sql;
                 sql = "SELECT " + Get_User_Type_Abbreviation(user_type_str) + "_name FROM " + Get_User_Type(user_type_str) + " WHERE " + Get_User_Type_Abbreviation(user_type_str) + "_id=" + user_id;
@@ -36,7 +36,8 @@ namespace EduManSystem
                 Label1.Text = Session["account_user_name"].ToString();
                 Console.Write(Session["account_user_name"].ToString());
 
-            } else
+            }
+            else
             {
                 Label1.Text = "登录失败";
             }

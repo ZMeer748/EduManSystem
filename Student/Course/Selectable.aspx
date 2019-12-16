@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student.master" AutoEventWireup="true" CodeBehind="Student_Course_Selectable.aspx.cs" Inherits="EduManSystem.Student_Course_Selectable" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/Student.master" AutoEventWireup="true" CodeBehind="Selectable.aspx.cs" Inherits="EduManSystem.Student.Course.Selectable" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -25,6 +25,7 @@
                 <asp:BoundField DataField="课程编号" HeaderText="课程编号" SortExpression="课程编号"></asp:BoundField>
                 <asp:BoundField DataField="课程名称" HeaderText="课程名称" SortExpression="课程名称"></asp:BoundField>
                 <asp:BoundField DataField="课程学分" HeaderText="课程学分" SortExpression="课程学分"></asp:BoundField>
+                <asp:BoundField DataField="开课院系" HeaderText="开课院系" SortExpression="开课院系"></asp:BoundField>
                 <asp:BoundField DataField="任课教师" HeaderText="任课教师" SortExpression="任课教师"></asp:BoundField>
               </Columns>
             </asp:GridView>
@@ -33,7 +34,7 @@
           <asp:SqlDataSource runat="server" ID="SqlDataSource1"
             ConnectionString='<%$ ConnectionStrings:ConnectionString %>'
             ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>'
-            SelectCommand="SELECT course.course_id as `课程编号`, course.course_name as `课程名称`,  course.course_credit as `课程学分`,  teacher.tch_name as `任课教师` FROM course INNER JOIN teacher ON course.tch_id = teacher.tch_id">
+            SelectCommand="SELECT course.course_id as `课程编号`, course.course_name as `课程名称`,  course.course_credit as `课程学分`, department.dept_name as `开课院系`, teacher.tch_name as `任课教师` FROM (course INNER JOIN teacher ON course.tch_id = teacher.tch_id) INNER JOIN department ON teacher.dept_id = department.dept_id">
           </asp:SqlDataSource>
         </div>
         <!-- /.card -->

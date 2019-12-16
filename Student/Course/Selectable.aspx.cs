@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EduManSystem.App_Code;
 
-
-namespace EduManSystem
+namespace EduManSystem.Student.Course
 {
-    public partial class Student_Course_Selectable : System.Web.UI.Page
+    public partial class Selectable : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

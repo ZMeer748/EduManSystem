@@ -7,11 +7,11 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EduManSystem
+namespace EduManSystem.Student.Course
 {
 
 
-    public partial class Student_Course_Selectable
+    public partial class Selectable
     {
 
         /// <summary>
