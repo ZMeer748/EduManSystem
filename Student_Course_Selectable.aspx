@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-  <link rel="stylesheet" href="AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  <link rel="stylesheet"
+    href='<%=ResolveClientUrl("~/AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.css") %>'>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHeaderNamePlaceHolder" runat="server">
   可选课程
@@ -19,21 +20,20 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
-                  DataSourceID="SqlDataSource1">
-                  <Columns>
-                      <asp:BoundField DataField="课程编号" HeaderText="课程编号" SortExpression="课程编号"></asp:BoundField>
-                      <asp:BoundField DataField="课程名称" HeaderText="课程名称" SortExpression="课程名称"></asp:BoundField>
-                      <asp:BoundField DataField="课程学分" HeaderText="课程学分" SortExpression="课程学分"></asp:BoundField>
-                      <asp:BoundField DataField="任课教师" HeaderText="任课教师" SortExpression="任课教师"></asp:BoundField>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+              <Columns>
+                <asp:BoundField DataField="课程编号" HeaderText="课程编号" SortExpression="课程编号"></asp:BoundField>
+                <asp:BoundField DataField="课程名称" HeaderText="课程名称" SortExpression="课程名称"></asp:BoundField>
+                <asp:BoundField DataField="课程学分" HeaderText="课程学分" SortExpression="课程学分"></asp:BoundField>
+                <asp:BoundField DataField="任课教师" HeaderText="任课教师" SortExpression="任课教师"></asp:BoundField>
               </Columns>
             </asp:GridView>
           </div>
           <!-- /.card-body -->
-            <asp:SqlDataSource runat="server" ID="SqlDataSource1"
-                ConnectionString='<%$ ConnectionStrings:ConnectionString %>'
-                ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>'
-                SelectCommand="SELECT course.course_id as `课程编号`, course.course_name as `课程名称`,  course.course_credit as `课程学分`,  teacher.tch_name as `任课教师` FROM course INNER JOIN teacher ON course.tch_id = teacher.tch_id">
+          <asp:SqlDataSource runat="server" ID="SqlDataSource1"
+            ConnectionString='<%$ ConnectionStrings:ConnectionString %>'
+            ProviderName='<%$ ConnectionStrings:ConnectionString.ProviderName %>'
+            SelectCommand="SELECT course.course_id as `课程编号`, course.course_name as `课程名称`,  course.course_credit as `课程学分`,  teacher.tch_name as `任课教师` FROM course INNER JOIN teacher ON course.tch_id = teacher.tch_id">
           </asp:SqlDataSource>
         </div>
         <!-- /.card -->
@@ -44,8 +44,8 @@
   </form>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
-  <script src="AdminLTE/plugins/datatables/jquery.dataTables.js"></script>
-  <script src="AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+  <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/datatables/jquery.dataTables.js") %>'></script>
+  <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.js") %>'></script>
   <script>
     $(function () {
       $('#MainContentPlaceHolder_StudentMainContentPlaceHolder_GridView1').DataTable();

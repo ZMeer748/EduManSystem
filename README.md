@@ -102,3 +102,6 @@
 | sc_score     |            | SINGLE  | | .2  | | | [sc_score]<=100 And [sc_score]>=0 |    |
 | sc_credit    |            | SINGLE  | | .2  | | | [sc_credit]<=10 And [sc_credit]>=0 |   |
 | sc_type      |            | BYTE    |      |     | 是   |          | 0 Or 1 Or 2 |       |
+
+
+  <!-- '<%=ResolveClientUrl() %>' -->

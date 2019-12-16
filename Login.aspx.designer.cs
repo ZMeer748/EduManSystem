@@ -33,13 +33,13 @@ namespace EduManSystem
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// Input_UserName 控件。
+        /// Input_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_UserName;
+        protected global::System.Web.UI.WebControls.TextBox Input_ID;
 
         /// <summary>
         /// Input_UserPassword 控件。
@@ -69,13 +69,13 @@ namespace EduManSystem
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden account_sort_label_value;
 
         /// <summary>
-        /// UpdatePanel1 控件。
+        /// UpdatePanel2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
         /// Button_Login 控件。
@@ -85,6 +85,15 @@ namespace EduManSystem
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton Button_Login;
+
+        /// <summary>
+        /// UpdatePanel1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
         /// Label1 控件。

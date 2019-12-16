@@ -542,6 +542,7 @@
     <Content Include="css\main.css" />
     <Content Include="css\util.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="IndexTest.aspx" />
     <Content Include="js\countdowntime.js" />
     <Content Include="js\main.js" />
@@ -557,6 +558,9 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IndexTest.aspx.cs">
       <DependentUpon>IndexTest.aspx</DependentUpon>
