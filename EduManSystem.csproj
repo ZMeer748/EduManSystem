@@ -552,6 +552,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\AccessHelper.cs" />
+    <Compile Include="App_Code\DBUtil.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -641,6 +642,9 @@
     <Content Include="AdminLTE\plugins\summernote\summernote-bs4.js.map" />
     <Content Include="AdminLTE\plugins\summernote\summernote-lite.js.map" />
     <Content Include="AdminLTE\plugins\summernote\summernote.js.map" />
+    <Content Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Student\Student.master" />
