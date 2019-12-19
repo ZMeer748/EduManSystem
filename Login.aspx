@@ -12,8 +12,8 @@
     <link href="https://cdn.bootcss.com/animsition/4.0.2/css/animsition.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/select2/4.0.10/css/select2.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" rel="stylesheet">
-    <link rel="stylesheet" href='<%=ResolveClientUrl("~/css/util.css") %>'>
-    <link rel="stylesheet" href='<%=ResolveClientUrl("~/css/main.css") %>'>
+    <link rel="stylesheet" href='<%=ResolveClientUrl("~/Styles/util.css") %>'>
+    <link rel="stylesheet" href='<%=ResolveClientUrl("~/Styles/main.css") %>'>
     <style>
         .callout span {
             font-weight: bold;
@@ -105,8 +105,8 @@
     <script src="https://cdn.bootcss.com/select2/4.0.10/js/select2.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/moment.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
-    <script src='<%=ResolveClientUrl("~/js/countdowntime.js") %>'></script>
-    <script src='<%=ResolveClientUrl("~/js/main.js") %>'></script>
+    <script src='<%=ResolveClientUrl("~/Scripts/countdowntime.js") %>'></script>
+    <script src='<%=ResolveClientUrl("~/Scripts/main.js") %>'></script>
     <script>
         $(function () {
             $("#MainContentPlaceHolder_Input_ID").val("");

@@ -51,19 +51,17 @@
           <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="index3.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
+          <!-- <a href="~/Login" class="nav-link">主页</a> -->
+          <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link" NavigateUrl="~/Login">主页</asp:HyperLink>
         </li>
       </ul>
 
       <!-- SEARCH FORM -->
       <form class="form-inline ml-3">
         <div class="input-group input-group-sm">
-          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control form-control-navbar" type="search" placeholder="搜索" aria-label="Search" disabled>
           <div class="input-group-append">
-            <button class="btn btn-navbar" type="submit">
+            <button class="btn btn-navbar" type="submit" disabled>
               <i class="fas fa-search"></i>
             </button>
           </div>
@@ -82,7 +80,8 @@
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/user1-128x128.jpg") %>' alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/user1-128x128.jpg") %>' alt="User Avatar"
+                  class="img-size-50 mr-3 img-circle">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Brad Diesel
@@ -98,7 +97,8 @@
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/user8-128x128.jpg") %>' alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/user8-128x128.jpg") %>' alt="User Avatar"
+                  class="img-size-50 img-circle mr-3">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     John Pierce
@@ -114,7 +114,8 @@
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/user3-128x128.jpg") %>' alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/user3-128x128.jpg") %>' alt="User Avatar"
+                  class="img-size-50 img-circle mr-3">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Nora Silvester
@@ -170,8 +171,8 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="#" class="brand-link">
-        <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/AdminLTELogo.png") %>' alt="EMS Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
+        <img src='<%=ResolveClientUrl("~/AdminLTE/dist/img/AdminLTELogo.png") %>' alt="EMS Logo"
+          class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">EMS 教务管理</span>
       </a>
 
@@ -180,7 +181,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image" runat="server" id="sidebar_user_icon_container">
-            <i class="fas fa-users img-circle elevation-2 text-white mt-1 ml-1" title="未登录"
+            <i class="fas fa-users img-circle elevation-2 text-white-50 mt-1 ml-1" title="未登录"
               style="font-size:1.5em;"></i>
             <!-- <i class="fas fa-user-cog img-circle elevation-2 text-white mt-1 ml-1" title="管理员"
               style="font-size:1.5em;"></i>
@@ -189,12 +190,17 @@
             <i class="fas fa-chalkboard-teacher img-circle elevation-2 text-white mt-1 ml-1" title="教师"
               style="font-size:1.5em;"></i> -->
           </div>
-          <div class="info">
+          <div class="info flex-grow-1">
             <a href="#" class="d-block">
               <!-- <asp:Label runat="server" Text="未登录"></asp:Label> -->
-              <asp:HyperLink ID="UserHyperLink" runat="server">未登录
+              <asp:HyperLink ID="UserHyperLink" runat="server" NavigateUrl="~/Login" class="d-block text-center">未登录
               </asp:HyperLink>
             </a>
+          </div>
+          <!-- Sign Out FORM -->
+          <div class="form-inline">
+            <button id="Button_SignOut" runat="server" onServerClick="Button_SignOut_Click"
+              class="btn btn-sm btn-outline-secondary">退出账号</button>
           </div>
         </div>
 

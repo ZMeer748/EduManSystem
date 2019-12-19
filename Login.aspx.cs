@@ -34,7 +34,7 @@ namespace EduManSystem
                 Session["account_user_type"] = user_type_str;
                 Label1.Text = "登录成功";
                 Label1.Text = Session["account_user_name"].ToString();
-                Console.Write(Session["account_user_name"].ToString());
+                System.Diagnostics.Debug.WriteLine(Session["account_user_name"].ToString() + " 登录成功");
 
                 Response.Redirect("~/Student/Course/Selectable");
 
@@ -42,6 +42,7 @@ namespace EduManSystem
             else
             {
                 Label1.Text = "登录失败";
+                System.Diagnostics.Debug.WriteLine("登录失败");
             }
         }
 
