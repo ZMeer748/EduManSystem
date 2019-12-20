@@ -47,8 +47,9 @@
                         <span class="focus-input100" data-placeholder="密码"></span>
                     </div>
 
-                    <div class="callout callout-info mt-3" style="border-left-color: #21d4fd;">
-                        以 <span id="account_sort_label" runat="server">学生</span> 的身份登录
+                    <div id="account_sort_callout" class="callout callout-info mt-3 d-flex justify-content-start"
+                        style="border-left-color: #21d4fd;">
+                        以 <span id="account_sort_label" runat="server" class="w-25 text-center">学生</span> 的身份登录
                         <input id="account_sort_label_value" runat="server" type="hidden" value="学生" />
                     </div>
 
@@ -115,6 +116,8 @@
                 $('#MainContentPlaceHolder_account_sort_label_value').val($(this).children('input')
                     .val());
             });
+            $("#MainContentPlaceHolder_Input_UserPassword").val("");
+            // $("#MainContentPlaceHolder_Input_UserPassword").attr("type", "password");
         });
     </script>
 </asp:Content>

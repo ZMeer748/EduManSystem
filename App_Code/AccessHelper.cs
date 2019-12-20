@@ -91,7 +91,7 @@ namespace EduManSystem.App_Code
         }
         #endregion
 
-        #region  执行简单SQL语句
+        #region 执行简单SQL语句
 
         /// <summary>
         /// 执行SQL语句，返回影响的记录数

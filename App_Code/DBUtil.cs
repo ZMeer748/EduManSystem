@@ -3,15 +3,36 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Collections;
 
 namespace EduManSystem.App_Code
 {
     public class DBUtil : AccessHelper
     {
-        public static DataSet GetTableDataSet(string table_name)
+        public static DataSet GetDataSet(string table_name)
         {
             string sql = "SELECT * FROM " + table_name;
             return AccessHelper.Query(sql);
+        }
+
+        public static DataTable GetDataTable(string sql)
+        {
+            return AccessHelper.Query(sql).Tables[0];
+        }
+
+        public static bool IsExist(string table_name, string PK_name, string PK_value)
+        {
+            string sql = "SELECT * FROM " + table_name + " WHERE " + PK_name + " = " + PK_value;
+            return AccessHelper.Exists(sql);
+        }
+
+        public static bool Add(string table_name, List<string> field_values)
+        {
+            string sql = "INSERT INTO " + table_name + ValuesListToString(field_values);
+            if (AccessHelper.ExecuteSql(sql) > 0)
+                return true;
+            else
+                return false;
         }
 
         public static bool Delete(string table_name, string PK_name, string PK_value)
@@ -22,76 +43,30 @@ namespace EduManSystem.App_Code
             else
                 return false;
         }
-    }
 
-    public class UserDBUtil : DBUtil
-    {
-        public static bool IsExist(string user_id, string user_type_str)
+        public static string Get(string table_name, string PK_name, string PK_value, string field_name)
         {
-            string sql = "SELECT * FROM " + GetUserType(user_type_str) + " WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = " + user_id;
-            return AccessHelper.Exists(sql);
-        }
-
-        public static string GetUserInfo(string user_id, string user_info_name, string user_type_str)
-        {
-            string user_type = GetUserType(user_type_str);
-            string user_type_abbreviation = GetUserTypeAbbreviation(user_type_str);
-            string sql = "SELECT " + user_type_abbreviation + "_" + user_info_name + " FROM " + user_type + " WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = " + user_id;
+            string sql = "SELECT " + field_name + " FROM " + table_name + " WHERE " + PK_name + " = " + PK_value;
             return AccessHelper.GetSingle(sql).ToString();
         }
 
-        public static bool UpdateUserInfo(string user_id, string user_info_name, string user_info_value, string user_type_str)
+        public static bool Update(string table_name, string PK_name, string PK_value, string field_name, string field_value)
         {
-            string user_type = GetUserType(user_type_str);
-            string user_type_abbreviation = GetUserTypeAbbreviation(user_type_str);
-            string sql = "UPDATE TABLE " + user_type + " SET " + user_type_abbreviation + "_" + user_info_name + " = " + user_info_value + " WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = " + user_id;
+            string sql = "UPDATE TABLE " + table_name + " SET " + field_name + " = " + field_value + " WHERE " + PK_name + " = " + PK_value;
             if (AccessHelper.ExecuteSql(sql) > 0)
                 return true;
             else
                 return false;
         }
 
-        // override
-        public static bool Delete(string user_id, string user_type_str)
+        public static string ValuesListToString(List<string> list)
         {
-            string user_type = GetUserType(user_type_str);
-            string user_type_abbreviation = GetUserTypeAbbreviation(user_type_str);
-            return Delete(user_type, user_type_abbreviation + "_id", user_id);
-            // string sql = "DELETE FROM " + user_type + " WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = " + user_id;
-        }
-
-        public static string GetUserType(string user_type_str)
-        {
-            switch (user_type_str)
+            string values_str = "VALUES(";
+            foreach (string str in list)
             {
-                case "student":
-                case "学生":
-                    return "student";
-                case "teacher":
-                case "教师":
-                    return "teacher";
-                case "administrator":
-                case "管理员":
-                    return "administrator";
+                values_str += str + ", ";
             }
-            return null;
-        }
-
-        public static string GetUserTypeAbbreviation(string user_type_str)
-        {
-            switch (user_type_str)
-            {
-                case "student":
-                case "学生":
-                    return "stu";
-                case "teacher":
-                case "教师":
-                    return "tch";
-                case "administrator":
-                case "管理员":
-                    return "admin";
-            }
-            return null;
+            return values_str += ")";
         }
     }
 

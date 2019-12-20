@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using EduManSystem.App_Code;
 
 namespace EduManSystem
@@ -12,9 +13,7 @@ namespace EduManSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String sql;
-            sql = "SELECT stu_name FROM student WHERE stu_id=17616";
-            Label1.Text = AccessHelper.GetSingle(sql).ToString();
+            Label1.Text = StudentUserDBUtil.GetAge("17616");
         }
     }
 }

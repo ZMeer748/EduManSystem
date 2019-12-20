@@ -539,11 +539,10 @@
     <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.min.js" />
     <Content Include="App_Data\DB_EduManSystem.accdb" />
     <Content Include="App_Data\DB_EduManSystem.sql" />
+    <Content Include="Default.aspx" />
     <Content Include="Styles\main.css" />
     <Content Include="Styles\util.css" />
-    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="IndexTest.aspx" />
     <Content Include="Scripts\countdowntime.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Login.aspx" />
@@ -553,6 +552,7 @@
   <ItemGroup>
     <Compile Include="App_Code\AccessHelper.cs" />
     <Compile Include="App_Code\DBUtil.cs" />
+    <Compile Include="App_Code\UserDBUtil.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -562,13 +562,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="IndexTest.aspx.cs">
-      <DependentUpon>IndexTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IndexTest.aspx.designer.cs">
-      <DependentUpon>IndexTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

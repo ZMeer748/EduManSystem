@@ -2,8 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-  <link rel="stylesheet"
-    href='<%=ResolveClientUrl("~/AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.css") %>'>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentHeaderNamePlaceHolder" runat="server">
   可选课程
@@ -38,6 +36,19 @@
           </asp:SqlDataSource>
         </div>
         <!-- /.card -->
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">可选课程列表</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+              <asp:GridView ID="GridView2" runat="server"></asp:GridView>
+          </div>
+          <!-- /.card-body -->
+        </div>
+
+        <!-- /.card -->
       </div>
       <!-- /.col -->
     </div>
@@ -45,11 +56,10 @@
   </form>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
-  <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/datatables/jquery.dataTables.js") %>'></script>
-  <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.js") %>'></script>
   <script>
     $(function () {
       $('#MainContentPlaceHolder_StudentMainContentPlaceHolder_GridView1').DataTable();
+      $('#MainContentPlaceHolder_StudentMainContentPlaceHolder_GridView2').DataTable();
     });
   </script>
 </asp:Content>
