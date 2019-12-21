@@ -107,7 +107,8 @@ namespace EduManSystem.App_Code
                         return cmd.ExecuteNonQuery();
                     } catch (System.Data.OleDb.OleDbException e) {
                         connection.Close();
-                        throw e;
+                        return 0;
+                        //throw e;
                     }
                 }
             }

@@ -13,7 +13,15 @@ namespace EduManSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = StudentUserDBUtil.GetAge("17616");
+            // Label1.Text = CourseScheduleDBUtil.UpdateCourseID("111", "12").ToString();
+
+            // List<string> list = new List<string>();
+            // list = new string[] { "17821", "林十一", "111111", "女", "1998/11/11", "0", "1782" }.ToList();
+            // Label1.Text = StudentUserDBUtil.Add("student", list).ToString();
+
+            // Label1.Text = StudentUserDBUtil.UpdateBirthday("17821", "1998/11/11").ToString();
+
+            Label1.Text = StudentUserDBUtil.Add("17821", "林十一", "111111", "女", "1998/11/11", "0", "1782").ToString();
         }
     }
 }

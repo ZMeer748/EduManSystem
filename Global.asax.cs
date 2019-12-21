@@ -61,7 +61,7 @@ namespace EduManSystem
             routes.MapPageRoute(
                 "Empty",
                 "",
-                "~/Login.aspx"
+                "~/Default.aspx"
             );
             routes.MapPageRoute(
                 "Login",

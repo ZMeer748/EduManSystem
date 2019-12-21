@@ -9,9 +9,8 @@ namespace EduManSystem.App_Code
 {
     public class DBUtil : AccessHelper
     {
-        public static DataSet GetDataSet(string table_name)
+        public static DataSet GetDataSet(string sql)
         {
-            string sql = "SELECT * FROM " + table_name;
             return AccessHelper.Query(sql);
         }
 
@@ -52,7 +51,7 @@ namespace EduManSystem.App_Code
 
         public static bool Update(string table_name, string PK_name, string PK_value, string field_name, string field_value)
         {
-            string sql = "UPDATE TABLE " + table_name + " SET " + field_name + " = " + field_value + " WHERE " + PK_name + " = " + PK_value;
+            string sql = "UPDATE " + table_name + " SET " + field_name + " = '" + field_value + "' WHERE " + PK_name + " = " + PK_value;
             if (AccessHelper.ExecuteSql(sql) > 0)
                 return true;
             else
@@ -61,12 +60,13 @@ namespace EduManSystem.App_Code
 
         public static string ValuesListToString(List<string> list)
         {
-            string values_str = "VALUES(";
-            foreach (string str in list)
+            string values_str = " VALUES('";
+            for (int i = 0; i < list.Count - 1; i++)
             {
-                values_str += str + ", ";
+                values_str += list[i] + "', '";
             }
-            return values_str += ")";
+            values_str += list[list.Count - 1];
+            return values_str += "')";
         }
     }
 
