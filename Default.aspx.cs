@@ -21,7 +21,9 @@ namespace EduManSystem
 
             // Label1.Text = StudentUserDBUtil.UpdateBirthday("17821", "1998/11/11").ToString();
 
-            Label1.Text = StudentUserDBUtil.Add("17821", "林十一", "111111", "女", "1998/11/11", "0", "1782").ToString();
+            // Label1.Text = StudentUserDBUtil.Add("17821", "林十一", "111111", "女", "1998/11/11", "0", "1782").ToString();
+
+            Label1.Text = StudentUserDBUtil.GetName("17616");
         }
     }
 }

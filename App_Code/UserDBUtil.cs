@@ -8,24 +8,24 @@ namespace EduManSystem.App_Code
 
     public class UserDBUtil : DBUtil
     {
-        public static bool IsExist(string user_id, string user_type_str)
+        public static bool Exists(string user_id, string user_type_str)
         {
-            return IsExist(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", user_id);
+            return Exists(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", "'" + user_id + "'");
         }
 
         public static bool Delete(string user_id, string user_type_str)
         {
-            return Delete(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", user_id);
+            return Delete(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", "'" + user_id + "'");
         }
 
         public static string Get(string user_id, string user_info_name, string user_type_str)
         {
-            return Get(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", user_id, GetUserTypeAbbreviation(user_type_str) + "_" + user_info_name);
+            return Get(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", "'" + user_id + "'", GetUserTypeAbbreviation(user_type_str) + "_" + user_info_name);
         }
 
         public static bool Update(string user_id, string user_info_name, string user_update_value, string user_type_str)
         {
-            return Update(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", user_id, GetUserTypeAbbreviation(user_type_str) + "_" + user_info_name, user_update_value);
+            return Update(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", "'" + user_id + "'", GetUserTypeAbbreviation(user_type_str) + "_" + user_info_name, user_update_value);
         }
 
         public static string GetName(string user_id, string user_type_str)
@@ -60,22 +60,22 @@ namespace EduManSystem.App_Code
 
         public static bool UpdateName(string user_id, string user_update_value, string user_type_str)
         {
-            return Update(user_id, "name", user_update_value, GetUserType(user_type_str));
+            return Update(user_id, "name", "'" + user_update_value + "'", GetUserType(user_type_str));
         }
 
         public static bool UpdatePassword(string user_id, string user_update_value, string user_type_str)
         {
-            return Update(user_id, "password", user_update_value, GetUserType(user_type_str));
+            return Update(user_id, "password", "'" + user_update_value + "'", GetUserType(user_type_str));
         }
 
         public static bool UpdateGender(string user_id, string user_update_value, string user_type_str)
         {
-            return Update(user_id, "gender", user_update_value, GetUserType(user_type_str));
+            return Update(user_id, "gender", "'" + user_update_value + "'", GetUserType(user_type_str));
         }
 
         public static bool UpdateBirthday(string user_id, string user_update_value, string user_type_str)
         {
-            return Update(user_id, "birthday", user_update_value, GetUserType(user_type_str));
+            return Update(user_id, "birthday", "'" + user_update_value + "'", GetUserType(user_type_str));
         }
 
         public static bool UpdateStatus(string user_id, string user_update_value, string user_type_str)
@@ -120,9 +120,9 @@ namespace EduManSystem.App_Code
 
     public class StudentUserDBUtil : UserDBUtil
     {
-        public static bool IsExist(string stu_id)
+        public static new bool Exists(string stu_id)
         {
-            return IsExist("student", stu_id);
+            return Exists("student", stu_id);
         }
 
         public static bool Add(string stu_id, string stu_name, string stu_password, string stu_gender, string stu_birthday, string stu_status, string class_id)
@@ -179,7 +179,7 @@ namespace EduManSystem.App_Code
 
         public static string GetClassID(string stu_id)
         {
-            return Get("student", "stu_id", stu_id, "class_id");
+            return Get("student", "stu_id", "'" + stu_id + "'", "class_id");
         }
 
         public static bool UpdateName(string stu_id, string stu_update_value)
@@ -209,15 +209,15 @@ namespace EduManSystem.App_Code
 
         public static bool UpdateClassID(string stu_id, string stu_update_value)
         {
-            return Update("student", "stu_id", stu_id, "class_id", stu_update_value);
+            return Update("student", "stu_id", stu_id, "class_id", "'" + stu_update_value + "'");
         }
     }
 
     public class TeacherUserDBUtil : UserDBUtil
     {
-        public static bool IsExist(string tch_id)
+        public static new bool Exists(string tch_id)
         {
-            return IsExist("teacher", tch_id);
+            return Exists("teacher", tch_id);
         }
 
         public static bool Add(string tch_id, string tch_name, string tch_password, string tch_gender, string tch_birthday, string tch_status, string dept_id)
@@ -274,7 +274,7 @@ namespace EduManSystem.App_Code
 
         public static string GetSeptID(string tch_id)
         {
-            return Get("teacher", "tch_id", tch_id, "sept_id");
+            return Get("teacher", "tch_id", "'" + tch_id + "'", "sept_id");
         }
 
         public static bool UpdateName(string tch_id, string tch_update_value)
@@ -304,15 +304,15 @@ namespace EduManSystem.App_Code
 
         public static bool UpdateSeptID(string tch_id, string tch_update_value)
         {
-            return Update("teacher", "tch_id", tch_id, "sept_id", tch_update_value);
+            return Update("teacher", "tch_id", tch_id, "sept_id", "'" + tch_update_value + "'");
         }
     }
 
     public class AdministratorUserDBUtil : UserDBUtil
     {
-        public static bool IsExist(string admin_id)
+        public static new bool Exists(string admin_id)
         {
-            return IsExist("administrator", admin_id);
+            return Exists("administrator", admin_id);
         }
 
         public static bool Add(string admin_id, string admin_name, string admin_password, string admin_gender, string admin_birthday, string admin_status)

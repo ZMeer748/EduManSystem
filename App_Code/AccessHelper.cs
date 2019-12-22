@@ -108,7 +108,7 @@ namespace EduManSystem.App_Code
                     } catch (System.Data.OleDb.OleDbException e) {
                         connection.Close();
                         return 0;
-                        //throw e;
+                        throw e;
                     }
                 }
             }
@@ -282,7 +282,8 @@ namespace EduManSystem.App_Code
                         }
                     } catch (System.Data.OleDb.OleDbException e) {
                         connection.Close();
-                        throw e;
+                        return null;
+                        // throw e;
                     }
                 }
             }
