@@ -36,6 +36,7 @@ namespace EduManSystem
 
         protected void Button_SignOut_Click(object sender, EventArgs e)
         {
+            Session["account_user_id"] = null;
             Session["account_user_name"] = null;
             Session["account_user_type"] = null;
             Response.Redirect("~/Login");

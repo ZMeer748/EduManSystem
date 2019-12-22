@@ -12,8 +12,8 @@
     <link href="https://cdn.bootcss.com/animsition/4.0.2/css/animsition.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/select2/4.0.10/css/select2.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" rel="stylesheet">
-    <link rel="stylesheet" href='<%=ResolveClientUrl("~/Styles/util.css") %>'>
-    <link rel="stylesheet" href='<%=ResolveClientUrl("~/Styles/main.css") %>'>
+    <link href='<%=ResolveClientUrl("~/Styles/util.css") %>' rel="stylesheet">
+    <link href='<%=ResolveClientUrl("~/Styles/main.css") %>' rel="stylesheet">
     <style>
         .callout span {
             font-weight: bold;
@@ -108,6 +108,8 @@
     <script src="https://cdn.bootcss.com/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
     <script src='<%=ResolveClientUrl("~/Scripts/countdowntime.js") %>'></script>
     <script src='<%=ResolveClientUrl("~/Scripts/main.js") %>'></script>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ScriptFunctionPlaceHolder" runat="server">
     <script>
         $(function () {
             $("#MainContentPlaceHolder_Input_ID").val("");

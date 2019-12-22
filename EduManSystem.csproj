@@ -554,6 +554,7 @@
     <Compile Include="App_Code\ClassDBUtil.cs" />
     <Compile Include="App_Code\CourseDBUtil.cs" />
     <Compile Include="App_Code\DBUtil.cs" />
+    <Compile Include="App_Code\ToastrHelper.cs" />
     <Compile Include="App_Code\UserDBUtil.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -43,7 +43,7 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-              <asp:GridView ID="GridView2" runat="server"></asp:GridView>
+            <asp:GridView ID="GridView2" runat="server"></asp:GridView>
           </div>
           <!-- /.card-body -->
         </div>
@@ -56,6 +56,8 @@
   </form>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ScriptFunctionPlaceHolder" runat="server">
   <script>
     $(function () {
       $('#MainContentPlaceHolder_StudentMainContentPlaceHolder_GridView1').DataTable();

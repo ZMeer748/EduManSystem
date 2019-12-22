@@ -71,7 +71,7 @@ namespace EduManSystem.App_Code
 
         public static DataTable GetDataTable()
         {
-            string sql = "SELECT course_schedule_id AS `课排编号`, course_id AS `课程编号`, dept_id AS `系编号`, course_schedule_type AS `课排类型`, course_schedule_capacity AS `课排容量`, course_schedule_semester AS `课排学期` FROM course_schedule";
+            string sql = "SELECT course_schedule_id AS `课排编号`, course_id AS `课程编号`, dept_id AS `系编号`, course_schedule_type AS `课排类型`, course_schedule_capacity AS `课排容量`, course_schedule_status AS `课排状态` FROM course_schedule";
             return GetDataTable(sql);
         }
 
@@ -112,9 +112,9 @@ namespace EduManSystem.App_Code
             return Get(course_schedule_id, "capacity");
         }
 
-        public static string GetSemester(string course_schedule_id)
+        public static string GetStatus(string course_schedule_id)
         {
-            return Get(course_schedule_id, "semester");
+            return Get(course_schedule_id, "status");
         }
 
         public static string GetCourseID(string course_schedule_id)
@@ -137,9 +137,9 @@ namespace EduManSystem.App_Code
             return Update(course_schedule_id, "capacity", course_schedule_update_value);
         }
 
-        public static bool UpdateSemester(string course_schedule_id, string course_schedule_update_value)
+        public static bool UpdateStatus(string course_schedule_id, string course_schedule_update_value)
         {
-            return Update(course_schedule_id, "semester", course_schedule_update_value);
+            return Update(course_schedule_id, "status", course_schedule_update_value);
         }
 
         public static bool UpdateCourseID(string course_schedule_id, string course_schedule_update_value)

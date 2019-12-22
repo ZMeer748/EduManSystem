@@ -12,10 +12,7 @@ namespace EduManSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // if (!IsPostBack)
-            // {
-            //     Button_Login.Attributes.Add("OnClick", "javascript:if(confirm('试试看吧，能成功否？')) return false; ");
-            // }
+
         }
 
         protected void Button_Login_Click(object sender, EventArgs e)
@@ -28,14 +25,15 @@ namespace EduManSystem
                 Session["account_user_name"] = UserDBUtil.GetName(input_user_id, input_user_type_str);
                 Session["account_user_id"] = input_user_id;
                 Session["account_user_type"] = input_user_type_str;
-                Label1.Text = "登录成功";
-                Label1.Text = Session["account_user_name"].ToString();
+                Label1.Text = Session["account_user_name"].ToString() + "登录成功";
 
                 Response.Redirect("~/Student/Course/Selectable");
             }
             else
             {
                 Label1.Text = "登录失败";
+                string toastrScript = ToastrHelper.GetToastrScript("danger", "提示", "登录失败！ID 不存在或密码错误。");
+                ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "script", toastrScript, true);
             }
         }
 

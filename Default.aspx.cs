@@ -25,5 +25,12 @@ namespace EduManSystem
 
             Label1.Text = StudentUserDBUtil.GetName("17616");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            // Page.ClientScript.RegisterStartupScript(this.GetType(), "pop", "jqueryFun()", true);
+            // ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "jqueryFun();", true);
+            ScriptManager.RegisterClientScriptBlock(UpdatePanel1, this.GetType(), "script", "alert('Hi');", true);
+        }
     }
 }

@@ -71,20 +71,33 @@ CREATE TABLE course(
     FOREIGN KEY(tch_id) REFERENCES teacher(tch_id)
 )
 
+CREATE TABLE course_schedule_status(
+    course_schedule_status_id BYTE,
+    course_schedule_status_name TEXT(20),
+    CONSTRAINT pk_course_schedule_status_course_schedule_statuss_id PRIMARY KEY(course_schedule_status_id)
+)
+
 CREATE TABLE course_schedule(
     course_schedule_id TEXT(20) UNIQUE NOT NULL,
     course_id TEXT(20) NOT NULL,
     dept_id TEXT(20) NOT NULL,
     course_schedule_type TEXT(20) NOT NULL,
     course_schedule_capacity INTEGER,
-    course_schedule_semester BYTE NOT NULL,
+    course_schedule_status BYTE NOT NULL,
     CONSTRAINT pk_sc_stu_id_course_id PRIMARY KEY(course_id, dept_id),
     CONSTRAINT fk_course_schedule_course_course_id FOREIGN KEY(course_id) REFERENCES course(course_id),
-    CONSTRAINT fk_course_schedule_department_dept_id FOREIGN KEY(dept_id) REFERENCES department(dept_id)
+    CONSTRAINT fk_course_schedule_department_dept_id FOREIGN KEY(dept_id) REFERENCES department(dept_id),
+    CONSTRAINT fk_course_schedule_status_id FOREIGN KEY(course_schedule_status) REFERENCES course_schedule_status(course_schedule_status_id)
 )
 -- course_schedule_type Default "公共必修课" Or "公共选修课" Or "专业必修课" Or "专业选修课"
 -- [course_schedule_semester]>0 And [course_schedule_semester]<=8
 -- course_schedule_capacity Default 300
+
+CREATE TABLE course_select_status(
+    course_select_status_id BYTE,
+    course_select_status_name TEXT(20),
+    CONSTRAINT pk_course_select_status_course_select_statuss_id PRIMARY KEY(course_select_status_id)
+)
 
 CREATE TABLE course_select(
     course_select_id TEXT(30) UNIQUE NOT NULL,
@@ -94,7 +107,8 @@ CREATE TABLE course_select(
     course_select_status BYTE NOT NULL,
     CONSTRAINT pk_course_select_stu_id_course_schedule_id PRIMARY KEY(stu_id, course_schedule_id),
     CONSTRAINT fk_course_select_student_stu_id FOREIGN KEY(stu_id) REFERENCES student(stu_id),
-    CONSTRAINT fk_course_select_course_schedule_course_schedule_id FOREIGN KEY(course_schedule_id) REFERENCES course_schedule(course_schedule_id)
+    CONSTRAINT fk_course_select_course_schedule_course_schedule_id FOREIGN KEY(course_schedule_id) REFERENCES course_schedule(course_schedule_id),
+    CONSTRAINT fk_course_select_status_id FOREIGN KEY(course_select_status) REFERENCES course_select_status(course_select_status_id)
 )
 -- [course_select_score]<=100 And [course_select_score]>=0
 -- course_select_score 小数点后两位
