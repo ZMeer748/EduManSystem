@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EduManSystem.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EduManSystem.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -21,9 +21,7 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="NavItemPlaceHolder" runat="server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="IndexMainContentPlaceHolder" runat="server">
     <div class="container-login100">
         <div class="wrap-login100">
             <form id="form1" class="login100-form validate-form" runat="server">
@@ -98,7 +96,7 @@
         </div>
     </div>
 </asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
     <!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://cdn.bootcss.com/animsition/4.0.2/js/animsition.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.15.0/esm/popper.min.js"></script>
@@ -109,16 +107,18 @@
     <script src='<%=ResolveClientUrl("~/Scripts/countdowntime.js") %>'></script>
     <script src='<%=ResolveClientUrl("~/Scripts/main.js") %>'></script>
 </asp:Content>
-<asp:Content ID="Content6" ContentPlaceHolderID="ScriptFunctionPlaceHolder" runat="server">
+<asp:Content ID="Content5" ContentPlaceHolderID="ScriptFunctionPlaceHolder" runat="server">
     <script>
         $(function () {
-            $("#MainContentPlaceHolder_Input_ID").val("");
+            $("#MainContentPlaceHolder_IndexMainContentPlaceHolder_Input_ID").val("");
             $("#count_sort_select label").on("click", function () {
-                $('#MainContentPlaceHolder_account_sort_label').html($(this).children('input').val());
-                $('#MainContentPlaceHolder_account_sort_label_value').val($(this).children('input')
+                $('#MainContentPlaceHolder_IndexMainContentPlaceHolder_account_sort_label').html($(this)
+                    .children('input').val());
+                $('#MainContentPlaceHolder_IndexMainContentPlaceHolder_account_sort_label_value').val($(
+                        this).children('input')
                     .val());
             });
-            $("#MainContentPlaceHolder_Input_UserPassword").val("");
+            $("#MainContentPlaceHolder_IndexMainContentPlaceHolder_Input_UserPassword").val("");
             // $("#MainContentPlaceHolder_Input_UserPassword").attr("type", "password");
         });
     </script>

@@ -11,7 +11,7 @@ namespace EduManSystem
 {
 
 
-    public partial class Site
+    public partial class Index
     {
 
         /// <summary>
@@ -33,58 +33,31 @@ namespace EduManSystem
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-        /// HyperLink1 控件。
+        /// IndexHyperLink1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink IndexHyperLink1;
 
         /// <summary>
-        /// sidebar_user_icon_container 控件。
+        /// IndexHyperLink2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sidebar_user_icon_container;
+        protected global::System.Web.UI.WebControls.HyperLink IndexHyperLink2;
 
         /// <summary>
-        /// UserHyperLink 控件。
+        /// IndexMainContentPlaceHolder 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink UserHyperLink;
-
-        /// <summary>
-        /// Button_SignOut 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Button_SignOut;
-
-        /// <summary>
-        /// NavItemPlaceHolder 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder NavItemPlaceHolder;
-
-        /// <summary>
-        /// MainContentPlaceHolder 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContentPlaceHolder;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder IndexMainContentPlaceHolder;
 
         /// <summary>
         /// ScriptPlaceHolder 控件。

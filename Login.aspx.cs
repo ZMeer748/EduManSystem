@@ -12,7 +12,12 @@ namespace EduManSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["account_user_name"] != null)
+            {
+                // Response.Write("<script language=javascript>alert('请登出后再尝试。');</script>");
+                // Server.Transfer("~/Default.aspx");
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('请先登出当前账号。'); window.location ='Default';", true);
+            }
         }
 
         protected void Button_Login_Click(object sender, EventArgs e)

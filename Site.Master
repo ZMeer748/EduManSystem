@@ -56,7 +56,7 @@
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <!-- <a href="~/Login" class="nav-link">主页</a> -->
-          <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link" NavigateUrl="~/Login">主页</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link" NavigateUrl="~/Default">主页</asp:HyperLink>
         </li>
       </ul>
 
