@@ -32,7 +32,18 @@ namespace EduManSystem
                 Session["account_user_type"] = input_user_type_str;
                 Label1.Text = Session["account_user_name"].ToString() + "登录成功";
 
-                Response.Redirect("~/Student/Course/Selectable");
+                switch (input_user_type_str)
+                {
+                    case "学生":
+                        Response.Redirect("~/Student/Course/Selectable");
+                        break;
+                    case "教师":
+                        Response.Redirect("~/Student/Course/Selectable");
+                        break;
+                    case "管理员":
+                        Response.Redirect("~/Administrator");
+                        break;
+                }
             }
             else
             {

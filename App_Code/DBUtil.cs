@@ -28,7 +28,8 @@ namespace EduManSystem.App_Code
         public static bool Add(string table_name, List<string> field_values)
         {
             string sql = "INSERT INTO " + table_name + ValuesListToString(field_values);
-            if (AccessHelper.ExecuteSql(sql) > 0)
+            int isChanged = AccessHelper.ExecuteSql(sql);
+            if (isChanged > 0)
                 return true;
             else
                 return false;

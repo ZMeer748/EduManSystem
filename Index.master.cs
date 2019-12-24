@@ -17,7 +17,7 @@ namespace EduManSystem
             {
                 IndexHyperLink2.CssClass = "nav-link active";
             }
-            else if (localPath.Equals("/Default") || localPath.Equals("/Default.aspx") || localPath.Equals("/"))
+            else if (localPath.Equals("/") || localPath.Equals("/Default") || localPath.Equals("/Default.aspx") || localPath.Equals("/default.aspx"))
             {
                 IndexHyperLink1.CssClass = "nav-link active";
             }

@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrator\Course.aspx" />
+    <Content Include="Administrator\Default.aspx" />
     <Content Include="AdminLTE\dist\css\adminlte.css" />
     <Content Include="AdminLTE\dist\css\adminlte.min.css" />
     <Content Include="AdminLTE\dist\css\alt\adminlte.components.css" />
@@ -244,6 +246,28 @@
     <Content Include="AdminLTE\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
     <Content Include="AdminLTE\plugins\icheck-bootstrap\icheck-bootstrap.css" />
     <Content Include="AdminLTE\plugins\icheck-bootstrap\icheck-bootstrap.min.css" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\bindings\inputmask.binding.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\dependencyLibs\inputmask.dependencyLib.jqlite.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\dependencyLibs\inputmask.dependencyLib.jquery.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\dependencyLibs\inputmask.dependencyLib.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\global\window.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\inputmask.date.extensions.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\inputmask.extensions.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\inputmask.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\inputmask.numeric.extensions.js" />
+    <Content Include="AdminLTE\plugins\inputmask\inputmask\jquery.inputmask.js" />
+    <Content Include="AdminLTE\plugins\inputmask\jquery.inputmask.bundle.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\bindings\inputmask.binding.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\dependencyLibs\inputmask.dependencyLib.jqlite.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\dependencyLibs\inputmask.dependencyLib.jquery.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\dependencyLibs\inputmask.dependencyLib.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\global\window.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\inputmask.date.extensions.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\inputmask.extensions.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\inputmask.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\inputmask.numeric.extensions.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\inputmask\jquery.inputmask.min.js" />
+    <Content Include="AdminLTE\plugins\inputmask\min\jquery.inputmask.bundle.min.js" />
     <Content Include="AdminLTE\plugins\jquery-knob\jquery.knob.min.js" />
     <Content Include="AdminLTE\plugins\jquery-ui\AUTHORS.txt" />
     <Content Include="AdminLTE\plugins\jquery-ui\external\jquery\jquery.js" />
@@ -550,6 +574,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Administrator.master.cs">
+      <DependentUpon>Administrator.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Administrator.master.designer.cs">
+      <DependentUpon>Administrator.master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Course.aspx.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Course.aspx.designer.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\AccessHelper.cs" />
     <Compile Include="App_Code\ClassDBUtil.cs" />
     <Compile Include="App_Code\CourseDBUtil.cs" />
@@ -649,6 +694,7 @@
       <Link>.editorconfig</Link>
     </Content>
     <Content Include="Index.master" />
+    <Content Include="Administrator\Administrator.master" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Student\Student.master" />
@@ -660,7 +706,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Administrator\" />
     <Folder Include="Teacher\" />
   </ItemGroup>
   <PropertyGroup>
