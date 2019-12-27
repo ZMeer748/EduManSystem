@@ -28,6 +28,11 @@ namespace EduManSystem.App_Code
             return Update(GetUserType(user_type_str), GetUserTypeAbbreviation(user_type_str) + "_id", "'" + user_id + "'", GetUserTypeAbbreviation(user_type_str) + "_" + user_info_name, user_update_value);
         }
 
+        public static string GetID(string user_id, string user_type_str)
+        {
+            return Get(user_id, "id", GetUserType(user_type_str));
+        }
+
         public static string GetName(string user_id, string user_type_str)
         {
             return Get(user_id, "name", GetUserType(user_type_str));
@@ -50,12 +55,17 @@ namespace EduManSystem.App_Code
 
         public static string GetAge(string user_id, string user_type_str)
         {
-            return AccessHelper.GetSingle("SELECT " + GetUserTypeAbbreviation(user_type_str) + "_age FROM " + GetUserType(user_type_str) + "_age WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = " + user_id).ToString();
+            return DBUtil.GetSingle("SELECT " + GetUserTypeAbbreviation(user_type_str) + "_age FROM " + GetUserType(user_type_str) + "_age WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = " + user_id).ToString();
         }
 
         public static string GetStatus(string user_id, string user_type_str)
         {
             return Get(user_id, "status", GetUserType(user_type_str));
+        }
+
+        public static bool UpdateID(string user_id, string user_update_value, string user_type_str)
+        {
+            return Update(user_id, "id", "'" + user_update_value + "'", GetUserType(user_type_str));
         }
 
         public static bool UpdateName(string user_id, string user_update_value, string user_type_str)
@@ -147,6 +157,11 @@ namespace EduManSystem.App_Code
             return Update(stu_id, "stu_" + stu_info_name, stu_update_value, "student");
         }
 
+        public static string GetID(string stu_id)
+        {
+            return GetID(stu_id, "student");
+        }
+
         public static string GetName(string stu_id)
         {
             return GetName(stu_id, "student");
@@ -180,6 +195,11 @@ namespace EduManSystem.App_Code
         public static string GetClassID(string stu_id)
         {
             return Get("student", "stu_id", "'" + stu_id + "'", "class_id");
+        }
+
+        public static bool UpdateID(string stu_id, string stu_update_value)
+        {
+            return UpdateID(stu_id, stu_update_value, "student");
         }
 
         public static bool UpdateName(string stu_id, string stu_update_value)
@@ -242,6 +262,11 @@ namespace EduManSystem.App_Code
             return Update(tch_id, "tch_" + tch_info_name, tch_update_value, "teacher");
         }
 
+        public static string GetID(string tch_id)
+        {
+            return GetID(tch_id, "teacher");
+        }
+
         public static string GetName(string tch_id)
         {
             return GetName(tch_id, "teacher");
@@ -272,9 +297,14 @@ namespace EduManSystem.App_Code
             return GetStatus(tch_id, "teacher");
         }
 
-        public static string GetSeptID(string tch_id)
+        public static string GetDepartmentID(string tch_id)
         {
             return Get("teacher", "tch_id", "'" + tch_id + "'", "sept_id");
+        }
+
+        public static bool UpdateID(string tch_id, string tch_update_value)
+        {
+            return UpdateID(tch_id, tch_update_value, "teacher");
         }
 
         public static bool UpdateName(string tch_id, string tch_update_value)
@@ -302,7 +332,7 @@ namespace EduManSystem.App_Code
             return UpdateStatus(tch_id, tch_update_value, "teacher");
         }
 
-        public static bool UpdateSeptID(string tch_id, string tch_update_value)
+        public static bool UpdateDepartmentID(string tch_id, string tch_update_value)
         {
             return Update("teacher", "tch_id", tch_id, "sept_id", "'" + tch_update_value + "'");
         }
@@ -337,6 +367,11 @@ namespace EduManSystem.App_Code
             return Update(admin_id, "admin_" + admin_info_name, admin_update_value, "administrator");
         }
 
+        public static string GetID(string admin_id)
+        {
+            return GetID(admin_id, "administrator");
+        }
+
         public static string GetName(string admin_id)
         {
             return GetName(admin_id, "administrator");
@@ -352,9 +387,24 @@ namespace EduManSystem.App_Code
             return GetGender(admin_id, "administrator");
         }
 
+        public static string GetBirthday(string admin_id)
+        {
+            return GetBirthday(admin_id, "administrator");
+        }
+
+        public static string GetAge(string admin_id)
+        {
+            return GetAge(admin_id, "administrator");
+        }
+
         public static string GetStatus(string admin_id)
         {
             return GetStatus(admin_id, "administrator");
+        }
+
+        public static bool UpdateID(string admin_id, string admin_update_value)
+        {
+            return UpdateID(admin_id, admin_update_value, "administrator");
         }
 
         public static bool UpdateName(string admin_id, string admin_update_value)
@@ -370,6 +420,11 @@ namespace EduManSystem.App_Code
         public static bool UpdateGender(string admin_id, string admin_update_value)
         {
             return UpdateGender(admin_id, admin_update_value, "administrator");
+        }
+
+        public static bool UpdateBirthday(string admin_id, string admin_update_value)
+        {
+            return UpdateBirthday(admin_id, admin_update_value, "administrator");
         }
 
         public static bool UpdateStatus(string admin_id, string admin_update_value)

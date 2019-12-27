@@ -11,6 +11,7 @@ namespace EduManSystem.App_Code
     {
         public static void GridViewReLoad(GridView gridView)
         {
+            gridView.DataBind();
             gridView.HeaderRow.TableSection = TableRowSection.TableHeader;
             gridView.CssClass = "table table-bordered table-striped";
         }

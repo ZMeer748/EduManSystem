@@ -123,3 +123,24 @@ INSERT INTO department(dept_id, dept_name) VALUES
 (6, '计算机科学系'),
 (7, '音乐系'),
 (8, '美术学院');
+
+-- 选课表
+SELECT course_select.course_select_id AS `选课编号`, course_select.stu_id AS `学生编号`, student.stu_name AS `学生姓名`, course_select.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, course_select.course_select_score AS `成绩`, course_select.course_select_status AS `选课状态` FROM ((course_select INNER JOIN course_schedule ON course_select.course_schedule_id = course_schedule.course_schedule_id) INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN student ON course_select.stu_id = student.stu_id
+
+-- 课程安排表
+SELECT course_schedule.course_schedule_id AS `课程安排编号`, course_schedule.course_id AS `课程编号`,course.course_name AS `课程名称`, course_schedule.dept_id AS `面向院系编号`, department.dept_name AS `院系名称`, course_schedule.course_schedule_type AS `课程安排类型`, course_schedule.course_schedule_capacity AS `课程安排容量`, course_schedule_status AS `课程安排状态` FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN department ON course_schedule.dept_id = department.dept_id
+
+-- 院系
+SELECT dept_id AS `院系编号`, dept_name AS `院系名称` FROM department
+
+-- 班级
+SELECT class.class_id AS `班级编号`, class.class_name AS `班级名称`, department.dept_name AS `所属院系` FROM class INNER JOIN department ON class.dept_id = department.dept_id
+
+-- 学生
+SELECT student.stu_id AS `学生编号`, student.stu_name AS `学生姓名`, student.stu_gender AS `性别`, DateDiff('yyyy',[student.stu_birthday],Date()) AS `年龄`, student.stu_status AS `用户状态`, student.class_id AS `班级编号`, class.class_name AS `班级名称`, department.dept_name AS `所属院系` FROM (student INNER JOIN class ON student.class_id = class.class_id) INNER JOIN department ON class.dept_id = department.dept_id
+
+-- 教师
+SELECT teacher.tch_id AS `教师编号`, teacher.tch_name AS `教师姓名`, teacher.tch_gender AS `性别`, DateDiff('yyyy',[teacher.tch_birthday],Date()) AS `年龄`, teacher.tch_status AS `用户状态`, teacher.dept_id AS `所属院系编号`,department.dept_name AS `所属院系` FROM teacher INNER JOIN department ON teacher.dept_id = department.dept_id
+
+-- 管理员
+SELECT admin_id AS `管理员编号`, admin_name AS `管理员姓名`, admin_gender AS `性别`, DateDiff('yyyy',[admin_birthday],Date()) AS `年龄`, admin_status AS `用户状态` FROM administrator 

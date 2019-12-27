@@ -35,6 +35,11 @@ namespace EduManSystem.App_Code
             return Update("course", "course_id", "'" + course_id + "'", "course_" + course_info_name, course_update_value);
         }
 
+        public static string GetID(string course_id, string course_info_name)
+        {
+            return Get(course_id, "id");
+        }
+
         public static string GetName(string course_id, string course_info_name)
         {
             return Get(course_id, "name");
@@ -48,6 +53,11 @@ namespace EduManSystem.App_Code
         public static string GetTchID(string course_id, string course_info_name)
         {
             return Get("course", "course_id", "'" + course_id + "'", "tch_id");
+        }
+
+        public static bool UpdateID(string course_id, string course_update_value)
+        {
+            return Update(course_id, "id", "'" + course_update_value + "'");
         }
 
         public static bool UpdateName(string course_id, string course_update_value)
@@ -102,6 +112,21 @@ namespace EduManSystem.App_Code
             return Update("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "course_schedule_" + course_schedule_info_name, course_schedule_update_value);
         }
 
+        public static string GetID(string course_schedule_id)
+        {
+            return Get(course_schedule_id, "id");
+        }
+
+        public static string GetCourseID(string course_schedule_id)
+        {
+            return Get("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "course_id");
+        }
+
+        public static string GetDeptID(string course_schedule_id)
+        {
+            return Get("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "dept_id");
+        }
+
         public static string GetType(string course_schedule_id)
         {
             return Get(course_schedule_id, "type");
@@ -117,14 +142,19 @@ namespace EduManSystem.App_Code
             return Get(course_schedule_id, "status");
         }
 
-        public static string GetCourseID(string course_schedule_id)
+        public static bool UpdateID(string course_schedule_id, string course_schedule_update_value)
         {
-            return Get("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "course_id");
+            return Update(course_schedule_id, "id", "'" + course_schedule_update_value + "'");
         }
 
-        public static string GetDeptID(string course_schedule_id)
+        public static bool UpdateCourseID(string course_schedule_id, string course_schedule_update_value)
         {
-            return Get("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "dept_id");
+            return Update("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "course_id", "'" + course_schedule_update_value + "'");
+        }
+
+        public static bool UpdateDeptID(string course_schedule_id, string course_schedule_update_value)
+        {
+            return Update("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "dept_id", "'" + course_schedule_update_value + "'");
         }
 
         public static bool UpdateType(string course_schedule_id, string course_schedule_update_value)
@@ -142,15 +172,6 @@ namespace EduManSystem.App_Code
             return Update(course_schedule_id, "status", course_schedule_update_value);
         }
 
-        public static bool UpdateCourseID(string course_schedule_id, string course_schedule_update_value)
-        {
-            return Update("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "course_id", "'" + course_schedule_update_value + "'");
-        }
-
-        public static bool UpdateDeptID(string course_schedule_id, string course_schedule_update_value)
-        {
-            return Update("course_schedule", "course_schedule_id", "'" + course_schedule_id + "'", "dept_id", "'" + course_schedule_update_value + "'");
-        }
     }
 
     public class CourseSelectDBUtil : DBUtil
@@ -161,10 +182,10 @@ namespace EduManSystem.App_Code
             return Exists("course_select", "course_select_id", "'" + course_select_id + "'");
         }
 
-        public static bool Add(string course_select_id, string stu_id, string course_schedule_id, string course_select_score)
+        public static bool Add(string course_select_id, string stu_id, string course_schedule_id, string course_select_score, string course_select_status)
         {
             List<string> list = new List<string>();
-            list = new string[] { course_select_id, stu_id, course_schedule_id, course_select_score }.ToList();
+            list = new string[] { course_select_id, stu_id, course_schedule_id, course_select_score, course_select_status }.ToList();
             return Add("course_select", list);
         }
 
@@ -183,9 +204,9 @@ namespace EduManSystem.App_Code
             return Update("course_select", "course_select_id", "'" + course_select_id + "'", "course_select_" + course_select_info_name, course_select_update_value);
         }
 
-        public static string GetScore(string course_select_id)
+        public static string GetID(string course_select_id)
         {
-            return Get(course_select_id, "score");
+            return Get(course_select_id, "id");
         }
 
         public static string GetStuID(string course_select_id)
@@ -198,17 +219,22 @@ namespace EduManSystem.App_Code
             return Get("course_select", "course_select_id", "'" + course_select_id + "'", "course_schedule_id");
         }
 
+        public static string GetScore(string course_select_id)
+        {
+            return Get(course_select_id, "score");
+        }
+
         public static string GetStatus(string course_select_id)
         {
             return Get(course_select_id, "status");
         }
 
-        public static bool UpdateScore(string course_select_id, string course_select_update_value)
+        public static bool UpdateID(string course_select_id, string course_select_update_value)
         {
-            return Update(course_select_id, "score", "'" + course_select_update_value + "'");
+            return Update(course_select_id, "id", "'" + course_select_update_value + "'");
         }
 
-        public static bool UpdateStuID(string course_select_id, string course_select_update_value)
+        public static bool UpdateStudentID(string course_select_id, string course_select_update_value)
         {
             return Update("course_select", "course_select_id", "'" + course_select_id + "'", "stu_id", "'" + course_select_update_value + "'");
         }
@@ -216,6 +242,11 @@ namespace EduManSystem.App_Code
         public static bool UpdateCourseScheduleID(string course_select_id, string course_select_update_value)
         {
             return Update("course_select", "course_select_id", "'" + course_select_id + "'", "course_schedule_id", "'" + course_select_update_value + "'");
+        }
+
+        public static bool UpdateScore(string course_select_id, string course_select_update_value)
+        {
+            return Update(course_select_id, "score", course_select_update_value);
         }
 
         public static bool UpdateStatus(string course_select_id, string course_select_update_value)

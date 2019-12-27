@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EduManSystem.Administrator
+namespace EduManSystem.Administrator.User
 {
 
 
@@ -15,147 +15,183 @@ namespace EduManSystem.Administrator
     {
 
         /// <summary>
-        /// tittle 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder tittle;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// head 控件。
+        /// ScriptManager1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// NavHyperLink1 控件。
+        /// UpdatePanel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink1;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// NavHyperLink_Course 控件。
+        /// Input_Add_Administrator_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_Course;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Administrator_ID;
 
         /// <summary>
-        /// NavHyperLink_Course_Schedule 控件。
+        /// Input_Add_Administrator_Name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_Course_Schedule;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Administrator_Name;
 
         /// <summary>
-        /// NavHyperLink_Course_Select 控件。
+        /// Input_Add_Administrator_Password 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_Course_Select;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Administrator_Password;
 
         /// <summary>
-        /// sidebar_user_treeview 控件。
+        /// Input_Add_Administrator_Gender 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sidebar_user_treeview;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Administrator_Gender;
 
         /// <summary>
-        /// NavHyperLink_User 控件。
+        /// Input_Add_Administrator_Birthday 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_User;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Administrator_Birthday;
 
         /// <summary>
-        /// NavHyperLink_User_Student 控件。
+        /// Input_Add_Administrator_Status 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_User_Student;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Administrator_Status;
 
         /// <summary>
-        /// NavHyperLink_User_Teacher 控件。
+        /// Button_Add 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_User_Teacher;
+        protected global::System.Web.UI.WebControls.Button Button_Add;
 
         /// <summary>
-        /// NavHyperLink_User_Administrator 控件。
+        /// UpdatePanel2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_User_Administrator;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
-        /// ContentHeaderNamePlaceHolder 控件。
+        /// Input_Delete_Administrator_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentHeaderNamePlaceHolder;
+        protected global::System.Web.UI.WebControls.TextBox Input_Delete_Administrator_ID;
 
         /// <summary>
-        /// ContentHeaderBreadCrumbPlaceHolder 控件。
+        /// Button_Delete 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentHeaderBreadCrumbPlaceHolder;
+        protected global::System.Web.UI.WebControls.Button Button_Delete;
 
         /// <summary>
-        /// AdministratorMainContentPlaceHolder 控件。
+        /// UpdatePanel3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AdministratorMainContentPlaceHolder;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
 
         /// <summary>
-        /// ScriptPlaceHolder 控件。
+        /// Input_Update_Administrator_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptPlaceHolder;
+        protected global::System.Web.UI.WebControls.TextBox Input_Update_Administrator_ID;
 
         /// <summary>
-        /// ScriptFunctionPlaceHolder 控件。
+        /// Input_Update_Item_Select 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptFunctionPlaceHolder;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect Input_Update_Item_Select;
+
+        /// <summary>
+        /// Input_Update_Value 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Input_Update_Value;
+
+        /// <summary>
+        /// Button_Update 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Update;
+
+        /// <summary>
+        /// UpdatePanel4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel4;
+
+        /// <summary>
+        /// GridView1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

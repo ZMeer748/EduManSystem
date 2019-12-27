@@ -34,6 +34,11 @@ namespace EduManSystem.App_Code
             return Update("class", "class_id", "'" + class_id + "'", "class_" + class_info_name, class_update_value);
         }
 
+        public static string GetID(string class_id, string class_info_name)
+        {
+            return Get(class_id, "id");
+        }
+
         public static string GetName(string class_id, string class_info_name)
         {
             return Get(class_id, "name");
@@ -42,6 +47,11 @@ namespace EduManSystem.App_Code
         public static string GetDeptID(string class_id, string class_info_name)
         {
             return Get("class", "class_id", "'" + class_id + "'", "dept_id");
+        }
+
+        public static bool UpdateID(string class_id, string class_update_value)
+        {
+            return Update(class_id, "id", "'" + class_update_value + "'");
         }
 
         public static bool UpdateName(string class_id, string class_update_value)

@@ -22,19 +22,21 @@
         </asp:HyperLink>
     </li>
     <li class="nav-item">
-        <asp:HyperLink ID="NavHyperLink_Course_Schedule" runat="server" NavigateUrl="#" class="nav-link">
+        <asp:HyperLink ID="NavHyperLink_Course_Schedule" runat="server" NavigateUrl="~/Administrator/CourseSchedule"
+            class="nav-link">
             <i class="fas fa-chalkboard nav-icon"></i>
             <p>课程安排管理</p>
         </asp:HyperLink>
     </li>
     <li class="nav-item">
-        <asp:HyperLink ID="NavHyperLink_Course_Select" runat="server" NavigateUrl="#" class="nav-link">
+        <asp:HyperLink ID="NavHyperLink_Course_Select" runat="server" NavigateUrl="~/Administrator/CourseSelect"
+            class="nav-link">
             <i class="fas fa-chalkboard nav-icon"></i>
             <p>选课信息管理</p>
         </asp:HyperLink>
     </li>
     <li class="nav-header">用户</li>
-    <li class="nav-item has-treeview">
+    <li id="sidebar_user_treeview" class="nav-item has-treeview" runat="server">
         <asp:HyperLink ID="NavHyperLink_User" runat="server" NavigateUrl="#" class="nav-link">
             <i class="fas fa-user nav-icon"></i>
             <p>
@@ -44,19 +46,22 @@
         </asp:HyperLink>
         <ul class="nav nav-treeview">
             <li class="nav-item">
-                <asp:HyperLink ID="NavHyperLink_User_Student" runat="server" NavigateUrl="#" class="nav-link">
+                <asp:HyperLink ID="NavHyperLink_User_Student" runat="server" NavigateUrl="~/Administrator/User/Student"
+                    class="nav-link">
                     <i class="fas fa-user-graduate nav-icon"></i>
                     <p>学生</p>
                 </asp:HyperLink>
             </li>
             <li class="nav-item">
-                <asp:HyperLink ID="NavHyperLink_User_Teacher" runat="server" NavigateUrl="#" class="nav-link">
+                <asp:HyperLink ID="NavHyperLink_User_Teacher" runat="server" NavigateUrl="~/Administrator/User/Teacher"
+                    class="nav-link">
                     <i class="fas fa-chalkboard-teacher nav-icon"></i>
                     <p>教师</p>
                 </asp:HyperLink>
             </li>
             <li class="nav-item">
-                <asp:HyperLink ID="NavHyperLink_User_Administrator" runat="server" NavigateUrl="#" class="nav-link">
+                <asp:HyperLink ID="NavHyperLink_User_Administrator" runat="server"
+                    NavigateUrl="~/Administrator/User/Administrator" class="nav-link">
                     <i class="fas fa-user-cog nav-icon"></i>
                     <p>管理员</p>
                 </asp:HyperLink>

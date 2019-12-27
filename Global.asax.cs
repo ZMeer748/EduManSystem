@@ -78,6 +78,31 @@ namespace EduManSystem
                 "Administrator/Course",
                 "~/Administrator/Course.aspx"
             );
+            routes.MapPageRoute(
+                "Administrator/CourseSchedule",
+                "Administrator/CourseSchedule",
+                "~/Administrator/CourseSchedule.aspx"
+            );
+            routes.MapPageRoute(
+                "Administrator/CourseSelect",
+                "Administrator/CourseSelect",
+                "~/Administrator/CourseSelect.aspx"
+            );
+            routes.MapPageRoute(
+                "Administrator/User/Student",
+                "Administrator/User/Student",
+                "~/Administrator/User/Student.aspx"
+            );
+            routes.MapPageRoute(
+                "Administrator/User/Teacher",
+                "Administrator/User/Teacher",
+                "~/Administrator/User/Teacher.aspx"
+            );
+            routes.MapPageRoute(
+                "Administrator/User/Administrator",
+                "Administrator/User/Administrator",
+                "~/Administrator/User/Administrator.aspx"
+            );
         }
     }
 }

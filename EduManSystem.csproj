@@ -69,7 +69,11 @@
   <ItemGroup>
     <Content Include="Administrator\Course.aspx" />
     <Content Include="Administrator\CourseSchedule.aspx" />
+    <Content Include="Administrator\CourseSelect.aspx" />
     <Content Include="Administrator\Default.aspx" />
+    <Content Include="Administrator\User\Administrator.aspx" />
+    <Content Include="Administrator\User\Student.aspx" />
+    <Content Include="Administrator\User\Teacher.aspx" />
     <Content Include="AdminLTE\dist\css\adminlte.css" />
     <Content Include="AdminLTE\dist\css\adminlte.min.css" />
     <Content Include="AdminLTE\dist\css\alt\adminlte.components.css" />
@@ -596,12 +600,40 @@
     <Compile Include="Administrator\CourseSchedule.aspx.designer.cs">
       <DependentUpon>CourseSchedule.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\CourseSelect.aspx.cs">
+      <DependentUpon>CourseSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\CourseSelect.aspx.designer.cs">
+      <DependentUpon>CourseSelect.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Administrator\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\User\Administrator.aspx.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\User\Administrator.aspx.designer.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\User\Student.aspx.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\User\Student.aspx.designer.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\User\Teacher.aspx.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\User\Teacher.aspx.designer.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\AccessHelper.cs" />
     <Compile Include="App_Code\ClassDBUtil.cs" />

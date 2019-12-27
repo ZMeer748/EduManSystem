@@ -11,7 +11,7 @@ namespace EduManSystem.Administrator
 {
 
 
-    public partial class CourseSchedule
+    public partial class CourseSelect
     {
 
         /// <summary>
@@ -42,6 +42,24 @@ namespace EduManSystem.Administrator
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
+        /// Input_Add_Course_Select_ID 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Course_Select_ID;
+
+        /// <summary>
+        /// Input_Add_Student_ID 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Student_ID;
+
+        /// <summary>
         /// Input_Add_Course_Schedule_ID 控件。
         /// </summary>
         /// <remarks>
@@ -51,49 +69,22 @@ namespace EduManSystem.Administrator
         protected global::System.Web.UI.WebControls.TextBox Input_Add_Course_Schedule_ID;
 
         /// <summary>
-        /// Input_Add_Course_ID 控件。
+        /// Input_Add_Course_Select_Score 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_Add_Course_ID;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Course_Select_Score;
 
         /// <summary>
-        /// Input_Add_Department_ID 控件。
+        /// Input_Add_Course_Select_Status 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_Add_Department_ID;
-
-        /// <summary>
-        /// Input_Add_Course_Schedule_Type 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Input_Add_Course_Schedule_Type;
-
-        /// <summary>
-        /// Input_Add_Course_Schedule_Capacity 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_Add_Course_Schedule_Capacity;
-
-        /// <summary>
-        /// Input_Add_Course_Schedule_Status 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_Add_Course_Schedule_Status;
+        protected global::System.Web.UI.WebControls.TextBox Input_Add_Course_Select_Status;
 
         /// <summary>
         /// Button_Add 控件。
@@ -114,13 +105,13 @@ namespace EduManSystem.Administrator
         protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
-        /// Input_Delete_Course_Schedule_ID 控件。
+        /// Input_Delete_Course_Select_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_Delete_Course_Schedule_ID;
+        protected global::System.Web.UI.WebControls.TextBox Input_Delete_Course_Select_ID;
 
         /// <summary>
         /// Button_Delete 控件。
@@ -141,13 +132,13 @@ namespace EduManSystem.Administrator
         protected global::System.Web.UI.UpdatePanel UpdatePanel3;
 
         /// <summary>
-        /// Input_Update_Course_Schedule_ID 控件。
+        /// Input_Update_Course_Select_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_Update_Course_Schedule_ID;
+        protected global::System.Web.UI.WebControls.TextBox Input_Update_Course_Select_ID;
 
         /// <summary>
         /// Input_Update_Item_Select 控件。

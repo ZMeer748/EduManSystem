@@ -10,16 +10,19 @@ namespace EduManSystem.Administrator
 {
     public partial class Course : System.Web.UI.Page
     {
-        List<GridView> gridViewList = new List<GridView>();
-        protected void Page_Load(object sender, EventArgs e)
+
+        protected void Data_Bind()
         {
             string sql1 = "SELECT course.course_id as `课程编号`, course.course_name as `课程名称`,  course.course_credit as `课程学分`, department.dept_name as `开课院系`, teacher.tch_name as `任课教师` FROM (course INNER JOIN teacher ON course.tch_id = teacher.tch_id) INNER JOIN department ON teacher.dept_id = department.dept_id";
             GeneralUtil.GridViewInit(GridView1, sql1);
-            gridViewList.Add(GridView1);
 
             string sql2 = "SELECT teacher.tch_id as `教师编号`, teacher.tch_name as `教师姓名`, teacher.tch_gender as `教师性别`, DateDiff('yyyy', [teacher.tch_birthday], Date()) as `教师年龄`,  department.dept_name as `所属院系` FROM teacher INNER JOIN department ON teacher.dept_id = department.dept_id";
-            GeneralUtil.GridViewInit(GridView2, sql1);
-            gridViewList.Add(GridView2);
+            GeneralUtil.GridViewInit(GridView2, sql2);
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Data_Bind();
         }
 
         protected void Button_Add_Click(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace EduManSystem.Administrator
                 string toastrScript = ToastrHelper.GetToastrScript("danger", "提示", "添加课程信息失败。");
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "script", toastrScript, true);
             }
-            GeneralUtil.GridViewReLoad(gridViewList);
+            Data_Bind();
         }
 
         protected void Button_Delete_Click(object sender, EventArgs e)
@@ -56,7 +59,7 @@ namespace EduManSystem.Administrator
                 string toastrScript = ToastrHelper.GetToastrScript("danger", "提示", "删除课程信息失败。");
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "script", toastrScript, true);
             }
-            GeneralUtil.GridViewReLoad(gridViewList);
+            Data_Bind();
         }
 
         protected void Button_Update_Click(object sender, EventArgs e)
@@ -67,6 +70,9 @@ namespace EduManSystem.Administrator
             bool isChanged = false;
             switch (update_item_select)
             {
+                case "课程编号":
+                    isChanged = CourseDBUtil.UpdateID(course_id, update_value);
+                    break;
                 case "课程名称":
                     isChanged = CourseDBUtil.UpdateName(course_id, update_value);
                     break;
@@ -87,7 +93,7 @@ namespace EduManSystem.Administrator
                 string toastrScript = ToastrHelper.GetToastrScript("danger", "提示", "修改课程信息失败。");
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "script", toastrScript, true);
             }
-            GeneralUtil.GridViewReLoad(gridViewList);
+            Data_Bind();
         }
 
     }
