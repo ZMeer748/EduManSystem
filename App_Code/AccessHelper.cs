@@ -283,7 +283,7 @@ namespace EduManSystem.App_Code
                     } catch (System.Data.OleDb.OleDbException e) {
                         connection.Close();
                         return null;
-                        // throw e;
+                        throw e;
                     }
                 }
             }

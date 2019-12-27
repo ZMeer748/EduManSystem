@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrator\Course.aspx" />
+    <Content Include="Administrator\CourseSchedule.aspx" />
     <Content Include="Administrator\Default.aspx" />
     <Content Include="AdminLTE\dist\css\adminlte.css" />
     <Content Include="AdminLTE\dist\css\adminlte.min.css" />
@@ -588,6 +589,13 @@
     <Compile Include="Administrator\Course.aspx.designer.cs">
       <DependentUpon>Course.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administrator\CourseSchedule.aspx.cs">
+      <DependentUpon>CourseSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\CourseSchedule.aspx.designer.cs">
+      <DependentUpon>CourseSchedule.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -599,6 +607,7 @@
     <Compile Include="App_Code\ClassDBUtil.cs" />
     <Compile Include="App_Code\CourseDBUtil.cs" />
     <Compile Include="App_Code\DBUtil.cs" />
+    <Compile Include="App_Code\GeneralUtil.cs" />
     <Compile Include="App_Code\ToastrHelper.cs" />
     <Compile Include="App_Code\UserDBUtil.cs" />
     <Compile Include="Default.aspx.cs">
