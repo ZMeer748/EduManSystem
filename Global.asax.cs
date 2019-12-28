@@ -108,6 +108,21 @@ namespace EduManSystem
                 "Student/CourseScore",
                 "~/Student/CourseScore.aspx"
             );
+            routes.MapPageRoute(
+                "Teacher/Course",
+                "Teacher/Course",
+                "~/Teacher/Course.aspx"
+            );
+            routes.MapPageRoute(
+                "Teacher/CourseScore",
+                "Teacher/CourseScore",
+                "~/Teacher/CourseScore.aspx"
+            );
+            routes.MapPageRoute(
+                "Teacher/CourseApplication",
+                "Teacher/CourseApplication",
+                "~/Teacher/CourseApplication.aspx"
+            );
         }
     }
 }

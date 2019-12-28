@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Student/Student.master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EduManSystem.Student.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Teacher/Teacher.master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EduManSystem.Teacher.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -7,7 +7,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentHeaderBreadCrumbPlaceHolder" runat="server">
 </asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="StudentMainContentPlaceHolder" runat="server">
+<asp:Content ID="Content5" ContentPlaceHolderID="TeacherMainContentPlaceHolder" runat="server">
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     </form>

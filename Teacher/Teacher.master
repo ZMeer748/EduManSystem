@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="EduManSystem.Student.Student" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Teacher.master.cs" Inherits="EduManSystem.Teacher.Teacher" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tittle" runat="server">
     <asp:ContentPlaceHolder ID="tittle" runat="server">
     </asp:ContentPlaceHolder>
@@ -16,23 +16,28 @@
     </li>
     <li class="nav-header">课程</li>
     <li class="nav-item">
-        <asp:HyperLink ID="NavHyperLink_Course_Select" runat="server" NavigateUrl="~/Student/CourseSelect"
-            class="nav-link">
+        <asp:HyperLink ID="NavHyperLink_Course" runat="server" NavigateUrl="~/Teacher/Course" class="nav-link">
             <i class="fas fa-chalkboard nav-icon"></i>
-            <p>选课</p>
+            <p>课程安排</p>
         </asp:HyperLink>
     </li>
     <li class="nav-item">
-        <asp:HyperLink ID="NavHyperLink_Course_Score" runat="server" NavigateUrl="~/Student/CourseScore"
+        <asp:HyperLink ID="NavHyperLink_Course_Score" runat="server" NavigateUrl="~/Teacher/CourseScore"
             class="nav-link">
             <i class="fas fa-chalkboard nav-icon"></i>
-            <p>成绩</p>
+            <p>录入成绩</p>
+        </asp:HyperLink>
+    </li>
+    <li class="nav-item">
+        <asp:HyperLink ID="NavHyperLink_Course_Application" runat="server" NavigateUrl="~/Teacher/CourseApplication"
+            class="nav-link">
+            <i class="fas fa-chalkboard nav-icon"></i>
+            <p>开课申请</p>
         </asp:HyperLink>
     </li>
     <li class="nav-header">账户管理</li>
     <li class="nav-item">
-        <asp:HyperLink ID="NavHyperLink_Password" runat="server" NavigateUrl="#"
-            class="nav-link">
+        <asp:HyperLink ID="NavHyperLink_Password" runat="server" NavigateUrl="#" class="nav-link">
             <i class="fas fa-user-cog nav-icon"></i>
             <p>密码修改</p>
         </asp:HyperLink>
@@ -65,7 +70,7 @@
     <!-- Main content -->
     <section class="content">
         <!-- Main Content -->
-        <asp:ContentPlaceHolder ID="StudentMainContentPlaceHolder" runat="server">
+        <asp:ContentPlaceHolder ID="TeacherMainContentPlaceHolder" runat="server">
         </asp:ContentPlaceHolder>
     </section>
     <!-- /.content -->

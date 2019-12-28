@@ -54,8 +54,17 @@ namespace EduManSystem.Student
                 //获得课程编号
                 string course_schedule_id = GridView1.Rows[row].Cells[0].Text;
                 //获得学生编号
-                // string stu_id = Session["user_id"].toString();
-                string stu_id = "17616";
+                string stu_id = Session["account_user_id"].ToString();
+
+                string sql = "SELECT course_schedule.course_schedule_capacity - course_selected_count.selected_count FROM course_schedule INNER JOIN course_selected_count ON course_schedule.course_schedule_id = course_selected_count.course_schedule_id WHERE course_schedule.course_schedule_id = '" + course_schedule_id + "'";
+
+                if (!(Int32.Parse(DBUtil.GetSingle(sql).ToString()) > 0))
+                {
+                    string toastrScript = ToastrHelper.GetToastrScript("danger", "提示", "当前课程容量已满。");
+                    ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "script", toastrScript, true);
+                    Data_Bind();
+                    return;
+                }
 
                 bool isChanged = CourseSelectDBUtil.Add(course_schedule_id + stu_id, stu_id, course_schedule_id, "0", "0");
                 if (isChanged)
@@ -90,8 +99,7 @@ namespace EduManSystem.Student
                 //获得课程编号
                 string course_schedule_id = GridView2.Rows[row].Cells[0].Text;
                 //获得学生编号
-                // string stu_id = Session["user_id"].toString();
-                string stu_id = "17616";
+                string stu_id = Session["account_user_id"].ToString();
 
                 bool isChanged = CourseSelectDBUtil.Delete(course_schedule_id + stu_id);
                 if (isChanged)

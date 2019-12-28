@@ -169,3 +169,11 @@ SELECT COUNT(course_schedule_id) AS selected_count FROM course_select WHERE cour
 
 -- /Student/CourseScore
 SELECT course_schedule.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, course_schedule.course_schedule_type AS `课程类型`, course.course_credit AS `课程学分`, course_select.course_select_score AS `课程成绩` FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN course_select ON course_select.course_schedule_id = course_schedule.course_schedule_id WHERE course_select.stu_id = '17616' AND course_select.course_select_score <> 0
+
+-- /Teacher/Course
+SELECT * FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN teacher ON course.tch_id = teacher.tch_id
+
+SELECT course_schedule.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, class.class_name AS `教授班级`, course_schedule.course_schedule_type AS `课程类型`, course_schedule.course_schedule_status AS `课程状态` FROM ((class INNER JOIN department ON class.dept_id = department.dept_id) LEFT JOIN course_schedule ON department.dept_id = course_schedule.dept_id) LEFT JOIN course ON course_schedule.course_id = course.course_id WHERE tch_id = '62'
+
+-- /Teacher/CourseScore
+SELECT student.stu_id AS `学生学号`, stu_name AS `学生姓名`, course_select_score AS `课程成绩` FROM (((course_select INNER JOIN course_schedule ON course_select.course_schedule_id = course_schedule.course_schedule_id) INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN teacher ON course.tch_id = teacher.tch_id) INNER JOIN student ON course_select.stu_id = student.stu_id WHERE course_schedule.course_schedule_id = '426' AND teacher.tch_id = '41'

@@ -578,6 +578,10 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\countdowntime.js" />
     <Content Include="Scripts\main.js" />
+    <Content Include="Teacher\Course.aspx" />
+    <Content Include="Teacher\CourseApplication.aspx" />
+    <Content Include="Teacher\CourseScore.aspx" />
+    <Content Include="Teacher\Default.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -704,6 +708,41 @@
     <Compile Include="Student\Student.master.designer.cs">
       <DependentUpon>Student.master</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\Course.aspx.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Course.aspx.designer.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\CourseApplication.aspx.cs">
+      <DependentUpon>CourseApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\CourseApplication.aspx.designer.cs">
+      <DependentUpon>CourseApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\CourseScore.aspx.cs">
+      <DependentUpon>CourseScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\CourseScore.aspx.designer.cs">
+      <DependentUpon>CourseScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Teacher.master.cs">
+      <DependentUpon>Teacher.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Teacher.master.designer.cs">
+      <DependentUpon>Teacher.master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE\dist\css\adminlte.css.map" />
@@ -755,6 +794,7 @@
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Student\Student.master" />
+    <Content Include="Teacher\Teacher.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -762,9 +802,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Teacher\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

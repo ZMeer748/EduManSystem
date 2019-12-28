@@ -151,6 +151,7 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
+        
         <div class="row">
             <div class="col-sm-12">
                 <asp:UpdatePanel ID="UpdatePanel4" runat="server">
@@ -177,8 +178,8 @@
                 </asp:UpdatePanel>
             </div>
             <!-- /.col -->
-            <div class="col-sm-12">
 
+            <div class="col-sm-12">
                 <asp:UpdatePanel ID="UpdatePanel5" runat="server">
                     <ContentTemplate>
                         <div class="card">
@@ -202,6 +203,7 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
+            <!-- /.col -->
         </div>
         <!-- /.row -->
     </form>
