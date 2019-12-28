@@ -34,17 +34,17 @@ namespace EduManSystem.App_Code
             return Update("class", "class_id", "'" + class_id + "'", "class_" + class_info_name, class_update_value);
         }
 
-        public static string GetID(string class_id, string class_info_name)
+        public static string GetID(string class_id)
         {
             return Get(class_id, "id");
         }
 
-        public static string GetName(string class_id, string class_info_name)
+        public static string GetName(string class_id)
         {
             return Get(class_id, "name");
         }
 
-        public static string GetDeptID(string class_id, string class_info_name)
+        public static string GetDeptID(string class_id)
         {
             return Get("class", "class_id", "'" + class_id + "'", "dept_id");
         }

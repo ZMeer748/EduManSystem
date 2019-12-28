@@ -570,12 +570,14 @@
     <Content Include="App_Data\DB_EduManSystem.sql" />
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Student\CourseScore.aspx" />
+    <Content Include="Student\CourseSelect.aspx" />
+    <Content Include="Student\Default.aspx" />
     <Content Include="Styles\main.css" />
     <Content Include="Styles\util.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\countdowntime.js" />
     <Content Include="Scripts\main.js" />
-    <Content Include="Student\Course\Selectable.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -674,12 +676,26 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Student\Course\Selectable.aspx.cs">
-      <DependentUpon>Selectable.aspx</DependentUpon>
+    <Compile Include="Student\CourseScore.aspx.cs">
+      <DependentUpon>CourseScore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\Course\Selectable.aspx.designer.cs">
-      <DependentUpon>Selectable.aspx</DependentUpon>
+    <Compile Include="Student\CourseScore.aspx.designer.cs">
+      <DependentUpon>CourseScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CourseSelect.aspx.cs">
+      <DependentUpon>CourseSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\CourseSelect.aspx.designer.cs">
+      <DependentUpon>CourseSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Student.master.cs">
       <DependentUpon>Student.master</DependentUpon>

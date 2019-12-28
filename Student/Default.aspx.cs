@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EduManSystem.Administrator
+namespace EduManSystem.Student
 {
     public partial class Default : System.Web.UI.Page
     {
@@ -15,7 +15,7 @@ namespace EduManSystem.Administrator
             {
                 Response.Redirect("~/");
             }
-            else if (!Session["account_user_type"].Equals("管理员"))
+            else if (!Session["account_user_type"].Equals("学生"))
             {
                 Response.Redirect("~/");
             }

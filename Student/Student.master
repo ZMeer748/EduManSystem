@@ -9,28 +9,33 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="NavItemPlaceHolder" runat="server">
     <li class="nav-item">
-        <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>选修课程</p>
-        </a>
+        <asp:HyperLink ID="NavHyperLink1" runat="server" NavigateUrl="#" class="nav-link">
+            <i class="fas fa-user nav-icon"></i>
+            <p>用户主页</p>
+        </asp:HyperLink>
+    </li>
+    <li class="nav-header">课程</li>
+    <li class="nav-item">
+        <asp:HyperLink ID="NavHyperLink_Course_Select" runat="server" NavigateUrl="~/Student/CourseSelect"
+            class="nav-link">
+            <i class="fas fa-chalkboard nav-icon"></i>
+            <p>选课</p>
+        </asp:HyperLink>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>已选课程</p>
-        </a>
+        <asp:HyperLink ID="NavHyperLink_Course_Score" runat="server" NavigateUrl="~/Student/CourseScore"
+            class="nav-link">
+            <i class="fas fa-chalkboard nav-icon"></i>
+            <p>成绩</p>
+        </asp:HyperLink>
     </li>
+    <li class="nav-header">课程</li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>成绩表</p>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>校历</p>
-        </a>
+        <asp:HyperLink ID="NavHyperLink_Password" runat="server" NavigateUrl="#"
+            class="nav-link">
+            <i class="fas fa-chalkboard nav-icon"></i>
+            <p>密码修改</p>
+        </asp:HyperLink>
     </li>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
@@ -73,4 +78,3 @@
     <asp:ContentPlaceHolder ID="ScriptFunctionPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </asp:Content>
-

@@ -69,11 +69,6 @@ namespace EduManSystem
                 "~/Login.aspx"
             );
             routes.MapPageRoute(
-                "Student/Course/Selectable",
-                "Student/Course/Selectable",
-                "~/Student/Course/Selectable.aspx"
-            );
-            routes.MapPageRoute(
                 "Administrator/Course",
                 "Administrator/Course",
                 "~/Administrator/Course.aspx"
@@ -102,6 +97,16 @@ namespace EduManSystem
                 "Administrator/User/Administrator",
                 "Administrator/User/Administrator",
                 "~/Administrator/User/Administrator.aspx"
+            );
+            routes.MapPageRoute(
+                "Student/CourseSelect",
+                "Student/CourseSelect",
+                "~/Student/CourseSelect.aspx"
+            );
+            routes.MapPageRoute(
+                "Student/CourseScore",
+                "Student/CourseScore",
+                "~/Student/CourseScore.aspx"
             );
         }
     }

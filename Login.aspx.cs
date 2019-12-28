@@ -35,10 +35,10 @@ namespace EduManSystem
                 switch (input_user_type_str)
                 {
                     case "学生":
-                        Response.Redirect("~/Student/Course/Selectable");
+                        Response.Redirect("~/Student");
                         break;
                     case "教师":
-                        Response.Redirect("~/Student/Course/Selectable");
+                        Response.Redirect("~/Teacher");
                         break;
                     case "管理员":
                         Response.Redirect("~/Administrator");

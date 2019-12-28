@@ -25,6 +25,15 @@ namespace EduManSystem.Administrator
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["account_user_type"] == null)
+            {
+                Response.Redirect("~/");
+            }
+            else if (!Session["account_user_type"].Equals("管理员"))
+            {
+                Response.Redirect("~/");
+            }
+
             Data_Bind();
         }
 

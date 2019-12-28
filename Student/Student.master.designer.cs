@@ -33,6 +33,42 @@ namespace EduManSystem.Student
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
+        /// NavHyperLink1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink1;
+
+        /// <summary>
+        /// NavHyperLink_Course_Select 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_Course_Select;
+
+        /// <summary>
+        /// NavHyperLink_Course_Score 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_Course_Score;
+
+        /// <summary>
+        /// NavHyperLink_Password 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink NavHyperLink_Password;
+
+        /// <summary>
         /// ContentHeaderNamePlaceHolder 控件。
         /// </summary>
         /// <remarks>
@@ -67,5 +103,14 @@ namespace EduManSystem.Student
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptPlaceHolder;
+
+        /// <summary>
+        /// ScriptFunctionPlaceHolder 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptFunctionPlaceHolder;
     }
 }

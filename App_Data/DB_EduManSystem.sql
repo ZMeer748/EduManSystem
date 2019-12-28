@@ -124,6 +124,7 @@ INSERT INTO department(dept_id, dept_name) VALUES
 (7, '音乐系'),
 (8, '美术学院');
 
+-- /Administrator/
 -- 选课表
 SELECT course_select.course_select_id AS `选课编号`, course_select.stu_id AS `学生编号`, student.stu_name AS `学生姓名`, course_select.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, course_select.course_select_score AS `成绩`, course_select.course_select_status AS `选课状态` FROM ((course_select INNER JOIN course_schedule ON course_select.course_schedule_id = course_schedule.course_schedule_id) INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN student ON course_select.stu_id = student.stu_id
 
@@ -143,4 +144,28 @@ SELECT student.stu_id AS `学生编号`, student.stu_name AS `学生姓名`, stu
 SELECT teacher.tch_id AS `教师编号`, teacher.tch_name AS `教师姓名`, teacher.tch_gender AS `性别`, DateDiff('yyyy',[teacher.tch_birthday],Date()) AS `年龄`, teacher.tch_status AS `用户状态`, teacher.dept_id AS `所属院系编号`,department.dept_name AS `所属院系` FROM teacher INNER JOIN department ON teacher.dept_id = department.dept_id
 
 -- 管理员
-SELECT admin_id AS `管理员编号`, admin_name AS `管理员姓名`, admin_gender AS `性别`, DateDiff('yyyy',[admin_birthday],Date()) AS `年龄`, admin_status AS `用户状态` FROM administrator 
+SELECT admin_id AS `管理员编号`, admin_name AS `管理员姓名`, admin_gender AS `性别`, DateDiff('yyyy',[admin_birthday],Date()) AS `年龄`, admin_status AS `用户状态` FROM administrator
+
+-- /Student/CourseSelect
+-- Student_Course_Selected
+-- Student_Course_Select_Able
+SELECT course_schedule.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, course_schedule.course_schedule_type AS `课程类型`, course_credit AS `课程学分`, course_schedule.course_schedule_capacity AS `容量`, course_schedule.course_schedule_capacity - course_selected_count.selected_count AS `余量` 
+FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id)
+LEFT JOIN course_selected_count ON course_schedule.course_schedule_id = course_selected_count.course_schedule_id
+WHERE course_schedule.dept_id = '6' AND course_schedule.course_schedule_id NOT IN (SELECT course_schedule_id FROM course_select WHERE stu_id = '17616')
+
+SELECT course_schedule.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, course_schedule.course_schedule_type AS `课程类型`, course_credit AS `课程学分`, course_schedule.course_schedule_capacity AS `容量`, course_schedule.course_schedule_capacity - course_selected_count.selected_count AS `余量` 
+FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id)
+LEFT JOIN course_selected_count ON course_schedule.course_schedule_id = course_selected_count.course_schedule_id
+SELECT course_schedule_id FROM course_select WHERE stu_id = '17616'
+
+SELECT course_schedule.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, course_schedule.course_schedule_type AS `课程类型`, course_credit AS `课程学分` FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN course_select ON course_select.course_schedule_id = course_schedule.course_schedule_id WHERE course_select.stu_id = '17616';
+
+-- Course_Selected_Count
+SELECT course_schedule.course_schedule_id, COUNT(course_select.course_schedule_id) AS selected_count FROM course_schedule LEFT JOIN course_select ON course_schedule.course_schedule_id = course_select.course_schedule_id GROUP BY course_schedule.course_schedule_id
+
+-- Student_Course_Selected
+SELECT COUNT(course_schedule_id) AS selected_count FROM course_select WHERE course_schedule_id = '666'
+
+-- /Student/CourseScore
+SELECT course_schedule.course_schedule_id AS `课程编号`, course.course_name AS `课程名称`, course_schedule.course_schedule_type AS `课程类型`, course.course_credit AS `课程学分`, course_select.course_select_score AS `课程成绩` FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN course_select ON course_select.course_schedule_id = course_schedule.course_schedule_id WHERE course_select.stu_id = '17616' AND course_select.course_select_score <> 0
