@@ -19,6 +19,7 @@ namespace EduManSystem.Student
             {
                 Response.Redirect("~/");
             }
+            Label_User_Name.Text = Session["account_user_name"].ToString();
         }
     }
 }

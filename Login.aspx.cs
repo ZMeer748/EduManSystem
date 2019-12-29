@@ -25,9 +25,7 @@ namespace EduManSystem
             string input_user_id = Input_ID.Text;
             string input_user_password = Input_UserPassword.Text;
             string input_user_type_str = account_sort_label_value.Value;
-            bool UserExists = UserDBUtil.Exists(input_user_id, input_user_type_str);
-            bool UserLoginCheck = UserDBUtil.GetPassword(input_user_id, input_user_type_str).Equals(input_user_password);
-            if (UserExists && UserLoginCheck)
+            if (UserDBUtil.Exists(input_user_id, input_user_type_str) && UserDBUtil.GetPassword(input_user_id, input_user_type_str).Equals(input_user_password))
             {
                 Session["account_user_name"] = UserDBUtil.GetName(input_user_id, input_user_type_str);
                 Session["account_user_id"] = input_user_id;

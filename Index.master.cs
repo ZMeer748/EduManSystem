@@ -21,7 +21,6 @@ namespace EduManSystem
             {
                 IndexHyperLink1.CssClass = "nav-link active";
             }
-            string toastrScript = ToastrHelper.GetToastrScript("success", "提示", localPath);
         }
     }
 }

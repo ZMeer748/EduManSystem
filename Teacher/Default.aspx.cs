@@ -11,7 +11,15 @@ namespace EduManSystem.Teacher
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["account_user_type"] == null)
+            {
+                Response.Redirect("~/");
+            }
+            else if (!Session["account_user_type"].Equals("教师"))
+            {
+                Response.Redirect("~/");
+            }
+            Label_User_Name.Text = Session["account_user_name"].ToString();
         }
     }
 }
