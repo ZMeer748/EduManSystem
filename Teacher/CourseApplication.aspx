@@ -64,4 +64,10 @@
 <asp:Content ID="Content6" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ScriptFunctionPlaceHolder" runat="server">
+    <script>
+        function pageLoad(sender, args) {
+            // data-mask
+            $('[data-mask]').inputmask();
+        };
+    </script>
 </asp:Content>

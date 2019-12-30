@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="NavItemPlaceHolder" runat="server">
     <li class="nav-item">
-        <asp:HyperLink ID="NavHyperLink1" runat="server" NavigateUrl="#" class="nav-link">
+        <asp:HyperLink ID="NavHyperLink1" runat="server" NavigateUrl="~/Teacher" class="nav-link">
             <i class="fas fa-user nav-icon"></i>
             <p>用户主页</p>
         </asp:HyperLink>

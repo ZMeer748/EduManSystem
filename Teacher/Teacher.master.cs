@@ -16,6 +16,10 @@ namespace EduManSystem.Teacher
             {
                 NavHyperLink1.CssClass = "nav-link active";
             }
+            else if (localPath.Equals("/Teacher/Course") || localPath.Equals("/Teacher/Course.aspx"))
+            {
+                NavHyperLink_Course.CssClass = "nav-link active";
+            }
             else if (localPath.Equals("/Teacher/CourseScore") || localPath.Equals("/Teacher/CourseScore.aspx"))
             {
                 NavHyperLink_Course_Score.CssClass = "nav-link active";

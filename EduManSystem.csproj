@@ -454,7 +454,6 @@
     <Content Include="Teacher\CourseApplication.aspx" />
     <Content Include="Teacher\CourseScore.aspx" />
     <Content Include="Teacher\Default.aspx" />
-    <Content Include="temp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -615,13 +614,6 @@
     </Compile>
     <Compile Include="Teacher\Teacher.master.designer.cs">
       <DependentUpon>Teacher.master</DependentUpon>
-    </Compile>
-    <Compile Include="temp.aspx.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="temp.aspx.designer.cs">
-      <DependentUpon>temp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

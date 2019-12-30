@@ -49,20 +49,10 @@ namespace EduManSystem
         void RegisterCustomRoutes(RouteCollection routes)
         {
             routes.MapPageRoute(
-                "ProductsByCategoryRoute",
-                "Category/{categoryName}",
-                "~/ProductList.aspx"
-            );
-            routes.MapPageRoute(
                 "Default",
                 "Default",
                 "~/Default.aspx"
             );
-            // routes.MapPageRoute(
-            //     "Empty",
-            //     "",
-            //     "~/Default.aspx"
-            // );
             routes.MapPageRoute(
                 "Login",
                 "Login",
