@@ -23,7 +23,6 @@
                         <h6 class="card-title">欢迎来到 EduManSystem，</h6>
 
                         <p class="card-text">请使用左侧侧边栏，导航至所需功能页面。</p>
-                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>
             </div>

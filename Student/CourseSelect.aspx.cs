@@ -51,9 +51,8 @@ namespace EduManSystem.Student
                     row = -1;
                 }
 
-                //获得课程编号
                 string course_schedule_id = GridView1.Rows[row].Cells[0].Text;
-                //获得学生编号
+
                 string stu_id = Session["account_user_id"].ToString();
 
                 string sql = "SELECT course_schedule.course_schedule_capacity - course_selected_count.selected_count FROM course_schedule INNER JOIN course_selected_count ON course_schedule.course_schedule_id = course_selected_count.course_schedule_id WHERE course_schedule.course_schedule_id = '" + course_schedule_id + "'";
@@ -96,9 +95,8 @@ namespace EduManSystem.Student
                     row = -1;
                 }
 
-                //获得课程编号
                 string course_schedule_id = GridView2.Rows[row].Cells[0].Text;
-                //获得学生编号
+                
                 string stu_id = Session["account_user_id"].ToString();
 
                 bool isChanged = CourseSelectDBUtil.Delete(course_schedule_id + stu_id);

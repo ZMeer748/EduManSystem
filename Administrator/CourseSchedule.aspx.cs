@@ -14,7 +14,6 @@ namespace EduManSystem.Administrator
 
         protected void Data_Bind()
         {
-            // string sql1 = "SELECT course_schedule_id AS `课程安排编号`, course_id AS `课程编号`, dept_id AS `面向院系编号`, course_schedule_type AS `课程安排类型`, course_schedule_capacity AS `课程安排容量`, course_schedule_status AS `课程安排状态` FROM course_schedule";
             string sql1 = "SELECT course_schedule.course_schedule_id AS `课程安排编号`, course_schedule.course_id AS `课程编号`,course.course_name AS `课程名称`, course_schedule.dept_id AS `面向院系编号`, department.dept_name AS `院系名称`, course_schedule.course_schedule_type AS `课程安排类型`, course_schedule.course_schedule_capacity AS `课程安排容量`, course_schedule_status AS `课程安排状态` FROM (course_schedule INNER JOIN course ON course_schedule.course_id = course.course_id) INNER JOIN department ON course_schedule.dept_id = department.dept_id";
             GeneralUtil.GridViewInit(GridView1, sql1);
 

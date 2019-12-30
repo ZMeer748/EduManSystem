@@ -158,8 +158,6 @@
   </script>
   <!-- Bootstrap 4 -->
   <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js") %>'></script>
-  <!-- ChartJS -->
-  <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/chart.js/Chart.min.js") %>'></script>
   <!-- InputMask -->
   <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/moment/moment.min.js") %>'></script>
   <script src='<%=ResolveClientUrl("~/AdminLTE/plugins/inputmask/min/jquery.inputmask.bundle.min.js") %>'></script>

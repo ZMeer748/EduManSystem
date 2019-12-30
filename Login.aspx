@@ -85,9 +85,9 @@
                         </asp:UpdatePanel>
                         <br />
                         <span class="txt1">
-                            还没有账号？
+                            忘记密码？
                         </span>
-                        <asp:HyperLink class="txt2" ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">点击注册
+                        <asp:HyperLink class="txt2" ID="HyperLink1" runat="server" NavigateUrl="#">找回
                         </asp:HyperLink>
                     </div>
                 </div>
@@ -119,7 +119,6 @@
                     .val());
             });
             $("#MainContentPlaceHolder_IndexMainContentPlaceHolder_Input_UserPassword").val("");
-            // $("#MainContentPlaceHolder_Input_UserPassword").attr("type", "password");
         });
     </script>
 </asp:Content>

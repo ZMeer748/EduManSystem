@@ -71,12 +71,6 @@
                                                         class="form-control" type="text"
                                                         data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
                                                 </div>
-                                                <!-- <div class="form-group">
-                                                    <label for="Input_Add_Tch_ID">任课教师编号</label>
-                                                    <input id="Input_Add_Tch_ID" name="course_name"
-                                                        class="form-control" type="text" data-inputmask-alias="datetime"
-                                                        data-inputmask-inputformat="yyyy/mm/dd" data-mask />
-                                                </div> -->
                                             </div>
                                         </div>
                                         <asp:Button ID="Button_Add" runat="server" Text="添加课程"

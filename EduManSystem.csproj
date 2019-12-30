@@ -132,12 +132,6 @@
     <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.js" />
     <Content Include="AdminLTE\plugins\bootstrap\js\bootstrap.min.js" />
-    <Content Include="AdminLTE\plugins\chart.js\Chart.bundle.js" />
-    <Content Include="AdminLTE\plugins\chart.js\Chart.bundle.min.js" />
-    <Content Include="AdminLTE\plugins\chart.js\Chart.css" />
-    <Content Include="AdminLTE\plugins\chart.js\Chart.js" />
-    <Content Include="AdminLTE\plugins\chart.js\Chart.min.css" />
-    <Content Include="AdminLTE\plugins\chart.js\Chart.min.js" />
     <Content Include="AdminLTE\plugins\datatables-autofill\css\autoFill.bootstrap4.css" />
     <Content Include="AdminLTE\plugins\datatables-autofill\css\autoFill.bootstrap4.min.css" />
     <Content Include="AdminLTE\plugins\datatables-autofill\js\autoFill.bootstrap4.js" />
@@ -298,38 +292,6 @@
     <Content Include="AdminLTE\plugins\jquery\jquery.min.js" />
     <Content Include="AdminLTE\plugins\jquery\jquery.slim.js" />
     <Content Include="AdminLTE\plugins\jquery\jquery.slim.min.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\jquery.vmap.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\jquery.vmap.min.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\jqvmap.css" />
-    <Content Include="AdminLTE\plugins\jqvmap\jqvmap.min.css" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.africa.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.asia.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.australia.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.europe.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.north-america.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\continents\jquery.vmap.south-america.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.algeria.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.argentina.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.brazil.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.canada.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.croatia.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.europe.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.france.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.germany.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.greece.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.indonesia.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.iran.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.iraq.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.new_regions_france.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.russia.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.serbia.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.tunisia.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.turkey.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.ukraine.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.usa.counties.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.usa.districts.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.usa.js" />
-    <Content Include="AdminLTE\plugins\jqvmap\maps\jquery.vmap.world.js" />
     <Content Include="AdminLTE\plugins\moment\locales.js" />
     <Content Include="AdminLTE\plugins\moment\locales.min.js" />
     <Content Include="AdminLTE\plugins\moment\locale\af.js" />
@@ -469,101 +431,6 @@
     <Content Include="AdminLTE\plugins\overlayScrollbars\js\OverlayScrollbars.js" />
     <Content Include="AdminLTE\plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
     <Content Include="AdminLTE\plugins\sparklines\sparkline.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ar-AR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ar-AR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-bg-BG.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-bg-BG.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ca-ES.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ca-ES.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-cs-CZ.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-cs-CZ.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-da-DK.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-da-DK.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-de-DE.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-de-DE.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-el-GR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-el-GR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-ES.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-ES.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-EU.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-es-EU.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fa-IR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fa-IR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fi-FI.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fi-FI.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fr-FR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-fr-FR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-gl-ES.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-gl-ES.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-he-IL.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-he-IL.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hr-HR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hr-HR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hu-HU.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-hu-HU.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-id-ID.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-id-ID.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-it-IT.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-it-IT.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ja-JP.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ja-JP.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ko-KR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ko-KR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LT.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LT.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LV.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-lt-LV.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-mn-MN.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-mn-MN.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nb-NO.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nb-NO.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nl-NL.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-nl-NL.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pl-PL.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pl-PL.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-BR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-BR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-PT.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-pt-PT.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ro-RO.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ro-RO.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ru-RU.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ru-RU.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sk-SK.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sk-SK.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sl-SI.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sl-SI.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS-Latin.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS-Latin.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sr-RS.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sv-SE.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-sv-SE.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ta-IN.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-ta-IN.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-th-TH.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-th-TH.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-tr-TR.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-tr-TR.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uk-UA.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uk-UA.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uz-UZ.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-uz-UZ.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-vi-VN.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-vi-VN.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-CN.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-CN.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-TW.js" />
-    <Content Include="AdminLTE\plugins\summernote\lang\summernote-zh-TW.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.css" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.js" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-lite.css" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-lite.js" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-lite.min.js" />
-    <Content Include="AdminLTE\plugins\summernote\summernote.css" />
-    <Content Include="AdminLTE\plugins\summernote\summernote.js" />
-    <Content Include="AdminLTE\plugins\summernote\summernote.min.js" />
     <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.css" />
     <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.min.css" />
     <Content Include="AdminLTE\plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.js" />
@@ -571,6 +438,9 @@
     <Content Include="App_Data\DB_EduManSystem.accdb" />
     <Content Include="App_Data\DB_EduManSystem.sql" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\coding_1.png" />
+    <Content Include="Images\database_1.png" />
+    <Content Include="Images\git_log_1.png" />
     <Content Include="Login.aspx" />
     <Content Include="Student\CourseScore.aspx" />
     <Content Include="Student\CourseSelect.aspx" />
@@ -584,6 +454,7 @@
     <Content Include="Teacher\CourseApplication.aspx" />
     <Content Include="Teacher\CourseScore.aspx" />
     <Content Include="Teacher\Default.aspx" />
+    <Content Include="temp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -745,6 +616,13 @@
     <Compile Include="Teacher\Teacher.master.designer.cs">
       <DependentUpon>Teacher.master</DependentUpon>
     </Compile>
+    <Compile Include="temp.aspx.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="temp.aspx.designer.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE\dist\css\adminlte.css.map" />
@@ -782,12 +660,6 @@
     <Content Include="AdminLTE\plugins\icheck-bootstrap\LICENSE" />
     <Content Include="AdminLTE\plugins\jquery\jquery.min.map" />
     <Content Include="AdminLTE\plugins\jquery\jquery.slim.min.map" />
-    <Content Include="AdminLTE\plugins\summernote\font\summernote.eot" />
-    <Content Include="AdminLTE\plugins\summernote\font\summernote.ttf" />
-    <Content Include="AdminLTE\plugins\summernote\font\summernote.woff" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-bs4.js.map" />
-    <Content Include="AdminLTE\plugins\summernote\summernote-lite.js.map" />
-    <Content Include="AdminLTE\plugins\summernote\summernote.js.map" />
     <Content Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </Content>
