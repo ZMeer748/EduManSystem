@@ -27,7 +27,7 @@
                                         <label>课程编号</label>
                                         <div class="input-group">
                                             <asp:TextBox id="Input_Course_Schedule_ID" runat="server" name="course_id"
-                                                class="form-control" type="text" data-inputmask='"mask": "[A|9]{1,8}"'
+                                                class="form-control" type="text" data-inputmask='"mask": "[a|9]{1,8}"'
                                                 data-mask />
                                             <span class="input-group-append">
                                                 <asp:Button ID="Button_Course_Search" runat="server" Text="查找课程"
@@ -40,7 +40,7 @@
                                         <div class="form-group">
                                             <label for="Input_Student_ID">学生编号</label>
                                             <asp:TextBox id="Input_Student_ID" runat="server" name="course_id"
-                                                class="form-control" type="text" data-inputmask='"mask": "[A|9]{1,8}"'
+                                                class="form-control" type="text" data-inputmask='"mask": "[a|9]{1,8}"'
                                                 data-mask />
                                         </div>
                                     </div>

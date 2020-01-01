@@ -46,7 +46,7 @@
                                                     <label for="Input_Add_Administrator_ID">管理员编号</label>
                                                     <asp:TextBox id="Input_Add_Administrator_ID" runat="server"
                                                         name="administrator_id" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,8}"' data-mask />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -61,7 +61,7 @@
                                                     <label for="Input_Add_Administrator_Password">用户密码</label>
                                                     <asp:TextBox id="Input_Add_Administrator_Password" runat="server"
                                                         name="administrator_password" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,16}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,16}"' data-mask />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -106,7 +106,7 @@
                                                     <label for="Input_Delete_Administrator_ID">管理员编号</label>
                                                     <asp:TextBox id="Input_Delete_Administrator_ID" runat="server"
                                                         name="administrator_id" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,8}"' data-mask />
                                                 </div>
                                             </div>
                                         </div>
@@ -126,7 +126,7 @@
                                                     <label for="Input_Update_Administrator_ID">管理员编号</label>
                                                     <asp:TextBox id="Input_Update_Administrator_ID" runat="server"
                                                         name="administrator_id" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,8}"' data-mask />
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
@@ -201,4 +201,13 @@
 <asp:Content ID="Content6" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="ScriptFunctionPlaceHolder" runat="server">
+    <script>
+        function pageLoad(sender, args) {
+            $('#MainContentPlaceHolder_AdministratorMainContentPlaceHolder_GridView1').DataTable();
+            $('#MainContentPlaceHolder_AdministratorMainContentPlaceHolder_GridView2').DataTable();
+
+            // data-mask
+            $('[data-mask]').inputmask();
+        };
+    </script>
 </asp:Content>

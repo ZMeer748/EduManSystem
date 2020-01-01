@@ -46,7 +46,7 @@
                                                     <label for="Input_Add_Teacher_ID">教师编号</label>
                                                     <asp:TextBox id="Input_Add_Teacher_ID" runat="server"
                                                         name="teacher_id" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,8}"' data-mask />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -61,7 +61,7 @@
                                                     <label for="Input_Add_Teacher_Password">用户密码</label>
                                                     <asp:TextBox id="Input_Add_Teacher_Password" runat="server"
                                                         name="teacher_password" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,16}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,16}"' data-mask />
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -94,7 +94,7 @@
                                                     <label for="Input_Add_Department_ID">所属院系编号</label>
                                                     <asp:TextBox id="Input_Add_Department_ID" runat="server"
                                                         name="dept_id" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,8}"' data-mask />
                                                 </div>
                                             </div>
                                         </div>
@@ -114,7 +114,7 @@
                                                     <label for="Input_Delete_Teacher_ID">教师编号</label>
                                                     <asp:TextBox id="Input_Delete_Teacher_ID" runat="server"
                                                         name="teacher_id" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,8}"' data-mask />
                                                 </div>
                                             </div>
                                         </div>
@@ -134,7 +134,7 @@
                                                     <label for="Input_Update_Teacher_ID">教师编号</label>
                                                     <asp:TextBox id="Input_Update_Teacher_ID" runat="server"
                                                         name="teacher_id" class="form-control" type="text"
-                                                        data-inputmask='"mask": "[A|9]{1,8}"' data-mask />
+                                                        data-inputmask='"mask": "[a|9]{1,8}"' data-mask />
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">

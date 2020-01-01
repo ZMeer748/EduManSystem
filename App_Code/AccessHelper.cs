@@ -42,17 +42,19 @@ namespace EduManSystem.App_Code
         }
         public static bool Exists(string strSql) {
             object obj = GetSingle(strSql);
-            int cmdresult;
+            // int cmdresult;
             if ((Object.Equals(obj, null)) || (Object.Equals(obj, System.DBNull.Value))) {
-                cmdresult = 0;
-            } else {
-                cmdresult = int.Parse(obj.ToString());
-            }
-            if (cmdresult == 0) {
+                // cmdresult = 0;
                 return false;
             } else {
+                //cmdresult = int.Parse(obj.ToString());
                 return true;
             }
+            // if (cmdresult == 0) {
+            //     return false;
+            // } else {
+            //     return true;
+            // }
         }
         /// <summary>
         /// 表是否存在

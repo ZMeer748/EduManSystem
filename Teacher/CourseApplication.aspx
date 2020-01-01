@@ -27,7 +27,7 @@
                                         <div class="form-group">
                                             <label for="Input_Course_ID">课程编号</label>
                                             <asp:TextBox id="Input_Course_ID" runat="server" name="course_id"
-                                                class="form-control" type="text" data-inputmask='"mask": "[A|9]{1,8}"'
+                                                class="form-control" type="text" data-inputmask='"mask": "[a|9]{1,8}"'
                                                 data-mask />
                                         </div>
                                     </div>
