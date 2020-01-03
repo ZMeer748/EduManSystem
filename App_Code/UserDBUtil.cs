@@ -55,7 +55,7 @@ namespace EduManSystem.App_Code
 
         public static string GetAge(string user_id, string user_type_str)
         {
-            return DBUtil.GetSingle("SELECT " + GetUserTypeAbbreviation(user_type_str) + "_age FROM " + GetUserType(user_type_str) + "_age WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = " + user_id).ToString();
+            return DBUtil.GetSingle("SELECT " + GetUserTypeAbbreviation(user_type_str) + "_age FROM " + GetUserType(user_type_str) + "_age WHERE " + GetUserTypeAbbreviation(user_type_str) + "_id = '" + user_id + "'").ToString();
         }
 
         public static string GetStatus(string user_id, string user_type_str)
@@ -132,7 +132,7 @@ namespace EduManSystem.App_Code
     {
         public static new bool Exists(string stu_id)
         {
-            return Exists("student", stu_id);
+            return Exists(stu_id, "student");
         }
 
         public static bool Add(string stu_id, string stu_name, string stu_password, string stu_gender, string stu_birthday, string stu_status, string class_id)
@@ -149,12 +149,12 @@ namespace EduManSystem.App_Code
 
         public static string Get(string stu_id, string stu_info_name)
         {
-            return Get(stu_id, "stu_" + stu_info_name, "student");
+            return Get(stu_id, stu_info_name, "student");
         }
 
         public static bool Update(string stu_id, string stu_info_name, string stu_update_value)
         {
-            return Update(stu_id, "stu_" + stu_info_name, stu_update_value, "student");
+            return Update(stu_id, stu_info_name, stu_update_value, "student");
         }
 
         public static string GetID(string stu_id)
@@ -237,7 +237,7 @@ namespace EduManSystem.App_Code
     {
         public static new bool Exists(string tch_id)
         {
-            return Exists("teacher", tch_id);
+            return Exists(tch_id, "teacher");
         }
 
         public static bool Add(string tch_id, string tch_name, string tch_password, string tch_gender, string tch_birthday, string tch_status, string dept_id)
@@ -254,12 +254,12 @@ namespace EduManSystem.App_Code
 
         public static string Get(string tch_id, string tch_info_name)
         {
-            return Get(tch_id, "tch_" + tch_info_name, "teacher");
+            return Get(tch_id, tch_info_name, "teacher");
         }
 
         public static bool Update(string tch_id, string tch_info_name, string tch_update_value)
         {
-            return Update(tch_id, "tch_" + tch_info_name, tch_update_value, "teacher");
+            return Update(tch_id, tch_info_name, tch_update_value, "teacher");
         }
 
         public static string GetID(string tch_id)
@@ -342,7 +342,7 @@ namespace EduManSystem.App_Code
     {
         public static new bool Exists(string admin_id)
         {
-            return Exists("administrator", admin_id);
+            return Exists(admin_id, "administrator");
         }
 
         public static bool Add(string admin_id, string admin_name, string admin_password, string admin_gender, string admin_birthday, string admin_status)
@@ -359,12 +359,12 @@ namespace EduManSystem.App_Code
 
         public static string Get(string admin_id, string admin_info_name)
         {
-            return Get(admin_id, "admin_" + admin_info_name, "administrator");
+            return Get(admin_id, admin_info_name, "administrator");
         }
 
         public static bool Update(string admin_id, string admin_info_name, string admin_update_value)
         {
-            return Update(admin_id, "admin_" + admin_info_name, admin_update_value, "administrator");
+            return Update(admin_id, admin_info_name, admin_update_value, "administrator");
         }
 
         public static string GetID(string admin_id)
